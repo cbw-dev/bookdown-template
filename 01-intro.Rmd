@@ -24,7 +24,7 @@ Location
 
 ### Michelle Brazas, PhD {-}
 
-![Photo of Michelle Brazas](./img/faculty/michelle-brazas.jpg)
+![Photo of Michelle Brazas](./img/faculty/michelle-brazas.jpg)\
 
 >Scientific Director <br>
 Canadian Bioinformatics Workshops (CBW) <br>
@@ -41,8 +41,7 @@ Computational Biology where she sits on the Board of Directors and Executive Boa
 
 ### Nia Hughes (she/her) </font> {-}
 
-asdsadadsa
-![Photo of Nia Hughes](./img/faculty/nia-hughes.jpeg)
+![Photo of Nia Hughes](./img/faculty/nia-hughes.jpeg)\
 
 >Program Manager, Bioinformatics.ca
 Ontario Institute for Cancer Research
