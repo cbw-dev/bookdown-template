@@ -14,23 +14,18 @@ github-repo: rstudio/bookdown-demo
 favicon: img/favicon.ico
 ---
 
-# [Name of Workshop] {-}
+# Welcome {-}
+
+Welcome to CBW’s [workshop name, year] Workshop!
 
 <!-- This is your index.Rmd file. It is the mandatory landing page for your website. -->
 
 Put some introductory content here. (ex. links to bioinformatics.ca, general info)
 
-## Class Photo
+## Pre-workshop Materials {-}
 
-<!-- ![Class Photo](./img/class-photo.jpg) --> <- Replace the file address to your actual class photo file location
+Click [here]() for your prework!
 
-## [USE BELOW FOR REFERENCE, DELETE FOR THE ACTUAL WORKSHOP]
+<!-- You can insert more here -->
 
-Notes: <br>
-<!--- comment ---> is the notation for making a comment in a .R/md file. The comment begins after <!--- and ends after the FIRST ---> symbols.
-
-<!-- This is a comment. --> Some explanations for this template will be in these comments.
-
-You can instantly make a comment by clicking on the line with the text you want to comment and using the keyboard command: `cmd/ctrl` + `shift` + `c`.
-
-Content that you should replace is written in square brackets [insert here].
+<!-- The rest of the content making up the welcome pages are in following files, which begin with "01#-description_of_file" -->
