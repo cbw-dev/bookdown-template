@@ -1,7 +1,7 @@
 fig:nice-fig
 tab:nice-tab
 eq:binom
-cbws-bookdown-template
+cbws-bookdown-template-testing
 usage
 render-book
 preview-book
