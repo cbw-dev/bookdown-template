@@ -15,3 +15,4 @@ BUGS:
 - backup html version: <img src="./img/faculty/nia-hughes.jpeg" alt="Description of the image">
 - maybe raise an issue
 
+- figure out good naming convention for files

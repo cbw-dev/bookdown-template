@@ -3,8 +3,8 @@
 Everything below will hopefully help you create a workshop website and understand how to work with this template.
 
 
-### Comments
- 
+### Comments {-}
+
 Notes:
 
 <!--- comment ---> is the notation for making a comment in a .R/md file. The comment begins after <!--- and ends after the FIRST ---> symbols.
@@ -13,6 +13,6 @@ Notes:
 
 You can instantly make a comment by clicking on the line with the text you want to comment and using the keyboard command: `cmd/ctrl` + `shift` + `c`.
 
-### Content in Square Brackets
+### Content in Square Brackets {-}
 
 Content that you should replace is written in square brackets [insert here].

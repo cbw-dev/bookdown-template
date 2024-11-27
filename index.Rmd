@@ -22,10 +22,4 @@ Welcome to CBW’s [workshop name, year] Workshop!
 
 Put some introductory content here. (ex. links to bioinformatics.ca, general info)
 
-## Pre-workshop Materials {-}
-
-Click [here]() for your prework!
-
-<!-- You can insert more here -->
-
 <!-- The rest of the content making up the welcome pages are in following files, which begin with "01#-description_of_file" -->

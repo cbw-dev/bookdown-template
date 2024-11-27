@@ -1,14 +1,4 @@
-# Introduction
-
-Welcome to CBW’s [workshop name, year] Workshop!
-
-## Pre-Workshop Materials
-
-Click [here]() for your prework!
-
-<!-- You can insert more here -->
-
-## Meet Your Faculty
+## Meet Your Faculty {-}
 
 Here's your team!
 
@@ -53,3 +43,8 @@ Nia is the Program Manager for Bioinformatics.ca, where she coordinates the Cana
 Bioinformatics Workshop Series. Prior to starting at OICR, she completed her M.Sc. in
 Bioinformatics from the University of Guelph in 2020 before working there as a
 bioinformatician studying epigenetic and transcriptomic patterns across maize varieties.
+
+## Class Photo {-}
+
+<!-- ![Class Photo](./img/class-photo.jpg) --> <- Replace the file address to your actual class photo file location
+

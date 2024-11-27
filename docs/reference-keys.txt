@@ -1,10 +1,4 @@
 eq:binom
-course-schedule
-introduction
-pre-workshop-materials-1
-meet-your-faculty
-comments
-content-in-square-brackets
 parts
 footnotes-and-citations
 footnotes
