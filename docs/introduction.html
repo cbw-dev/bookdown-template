@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Cross-references | [Name of Workshop][Year]</title>
+  <title>1 Introduction | [Name of Workshop][Year]</title>
   <meta name="description" content="CBW’s Bookdown Template for Workshops" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Cross-references | [Name of Workshop][Year]" />
+  <meta property="og:title" content="1 Introduction | [Name of Workshop][Year]" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="CBW’s Bookdown Template for Workshops" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Cross-references | [Name of Workshop][Year]" />
+  <meta name="twitter:title" content="1 Introduction | [Name of Workshop][Year]" />
   
   <meta name="twitter:description" content="CBW’s Bookdown Template for Workshops" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="introduction.html"/>
-<link rel="next" href="parts.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="cross.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -230,93 +230,62 @@ BUT CHANGE THE FILE LOCATION TO THE FILE LOCATION OF YOUR LOGO]
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cross" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Cross-references<a href="cross.html#cross" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Cross-references make it easier for your readers to find and link to elements in your book.</p>
-<div id="chapters-and-sub-chapters" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Chapters and sub-chapters<a href="cross.html#chapters-and-sub-chapters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are two steps to cross-reference any heading:</p>
-<ol style="list-style-type: decimal">
-<li>Label the heading: <code># Hello world {#nice-label}</code>.
-<ul>
-<li>Leave the label off if you like the automated heading generated based on your heading title: for example, <code># Hello world</code> = <code># Hello world {#hello-world}</code>.</li>
-<li>To label an un-numbered heading, use: <code># Hello world {-#nice-label}</code> or <code>{# Hello world .unnumbered}</code>.</li>
-</ul></li>
-<li>Next, reference the labeled heading anywhere in the text using <code>\@ref(nice-label)</code>; for example, please see Chapter <a href="cross.html#cross">2</a>.
-<ul>
-<li>If you prefer text as the link instead of a numbered reference use: <a href="cross.html#cross">any text you want can go here</a>.</li>
-</ul></li>
-</ol>
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Welcome to CBW’s [workshop name, year] Workshop!</p>
+<div id="pre-workshop-materials" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Pre-Workshop Materials<a href="introduction.html#pre-workshop-materials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Click <a href="">here</a> for your prework!</p>
+<!-- You can insert more here -->
 </div>
-<div id="captioned-figures-and-tables" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Captioned figures and tables<a href="cross.html#captioned-figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Figures and tables <em>with captions</em> can also be cross-referenced from elsewhere in your book using <code>\@ref(fig:chunk-label)</code> and <code>\@ref(tab:chunk-label)</code>, respectively.</p>
-<p>See Figure <a href="cross.html#fig:nice-fig">2.1</a>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="cross.html#cb1-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb1-2"><a href="cross.html#cb1-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
-<img src="_main_files/figure-html/nice-fig-1.png" alt="Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases." width="80%" />
-<p class="caption">
-Figure 2.1: Here is a nice figure!
-</p>
+<div id="meet-your-faculty" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Meet Your Faculty<a href="introduction.html#meet-your-faculty" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here’s your team!</p>
+<div id="instructor-ta" class="section level3 unnumbered hasAnchor">
+<h3>Instructor, TA, …<a href="introduction.html#instructor-ta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>Job Title <br>
+Company/University/… <br>
+Location</p>
+<p>— contact information</p>
+</blockquote>
+<p>[insert description of the person]</p>
 </div>
-<p>Don’t miss Table <a href="cross.html#tab:nice-tab">2.1</a>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="cross.html#cb2-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb2-2"><a href="cross.html#cb2-2" tabindex="-1"></a>  <span class="fu">head</span>(pressure, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb2-3"><a href="cross.html#cb2-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb2-4"><a href="cross.html#cb2-4" tabindex="-1"></a>)</span></code></pre></div>
-<table>
-<caption><span id="tab:nice-tab">Table 2.1: </span>Here is a nice table!</caption>
-<thead>
-<tr class="header">
-<th align="right">temperature</th>
-<th align="right">pressure</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">0</td>
-<td align="right">0.0002</td>
-</tr>
-<tr class="even">
-<td align="right">20</td>
-<td align="right">0.0012</td>
-</tr>
-<tr class="odd">
-<td align="right">40</td>
-<td align="right">0.0060</td>
-</tr>
-<tr class="even">
-<td align="right">60</td>
-<td align="right">0.0300</td>
-</tr>
-<tr class="odd">
-<td align="right">80</td>
-<td align="right">0.0900</td>
-</tr>
-<tr class="even">
-<td align="right">100</td>
-<td align="right">0.2700</td>
-</tr>
-<tr class="odd">
-<td align="right">120</td>
-<td align="right">0.7500</td>
-</tr>
-<tr class="even">
-<td align="right">140</td>
-<td align="right">1.8500</td>
-</tr>
-<tr class="odd">
-<td align="right">160</td>
-<td align="right">4.2000</td>
-</tr>
-<tr class="even">
-<td align="right">180</td>
-<td align="right">8.8000</td>
-</tr>
-</tbody>
-</table>
+<div id="michelle-brazas-phd" class="section level3 unnumbered hasAnchor">
+<h3>Michelle Brazas, PhD<a href="introduction.html#michelle-brazas-phd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="float">
+<img src="img/faculty/michelle-brazas.jpg" alt="Photo of Michelle Brazas" />
+<div class="figcaption">Photo of Michelle Brazas</div>
+</div>
+<blockquote>
+<p>Scientific Director <br>
+Canadian Bioinformatics Workshops (CBW) <br>
+Toronto, ON, CA</p>
+<p>— <a href="mailto:support@bioinformatics.ca" class="email">support@bioinformatics.ca</a></p>
+</blockquote>
+<p>Dr. Michelle Brazas is the Associate Director for Adaptive Oncology at the Ontario Institute for
+Cancer Research (OICR), and acting Scientific Director at Bioinformatics.ca. Previously, Dr.
+Brazas was the Program Manager for Bioinformatics.ca and a faculty member in
+Biotechnology at BCIT. Michelle co-founded and runs the Toronto Bioinformatics User Group
+(TorBUG) now in its 11th season, and plays an active role in the International Society of
+Computational Biology where she sits on the Board of Directors and Executive Board.</p>
+</div>
+<div id="nia-hughes-sheher" class="section level3 unnumbered hasAnchor">
+<h3>Nia Hughes (she/her) </font><a href="introduction.html#nia-hughes-sheher" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>asdsadadsa
+<img src="img/faculty/nia-hughes.jpeg" alt="Photo of Nia Hughes" /></p>
+<blockquote>
+<p>Program Manager, Bioinformatics.ca
+Ontario Institute for Cancer Research
+Toronto, ON, Canada</p>
+<p>— <a href="mailto:nia.hughes@oicr.on.ca" class="email">nia.hughes@oicr.on.ca</a></p>
+</blockquote>
+<p>Nia is the Program Manager for Bioinformatics.ca, where she coordinates the Canadian
+Bioinformatics Workshop Series. Prior to starting at OICR, she completed her M.Sc. in
+Bioinformatics from the University of Guelph in 2020 before working there as a
+bioinformatician studying epigenetic and transcriptomic patterns across maize varieties.</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -324,8 +293,8 @@ Figure 2.1: Here is a nice figure!
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="parts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cross.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -356,7 +325,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-cross-refs.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-intro.Rmd",
 "text": "Edit"
 },
 "history": {

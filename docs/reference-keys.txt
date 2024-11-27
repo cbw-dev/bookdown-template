@@ -1,12 +1,11 @@
 fig:nice-fig
 tab:nice-tab
 eq:binom
-cbws-bookdown-template-testing
-usage
-render-book
-preview-book
-hello-bookdown
-a-section
+class-photo
+use-below-for-reference-delete-for-the-actual-workshop
+introduction
+pre-workshop-materials
+meet-your-faculty
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables

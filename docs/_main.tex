@@ -113,14 +113,14 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={A Minimal Book Example},
-  pdfauthor={John Doe},
+  pdftitle={{[}Name of Workshop{]}{[}Year{]}},
+  pdfauthor={Instructors: {[}list instructor names here{]}},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{A Minimal Book Example}
-\author{John Doe}
-\date{2024-11-27}
+\title{{[}Name of Workshop{]}{[}Year{]}}
+\author{Instructors: {[}list instructor names here{]}}
+\date{{[}Insert dates of the workshop{]}}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -146,62 +146,93 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\chapter{CBW's Bookdown Template ! TESTING}\label{cbws-bookdown-template-testing}
+\chapter*{{[}Name of Workshop{]}}\label{name-of-workshop}
+\addcontentsline{toc}{chapter}{{[}Name of Workshop{]}}
 
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports; for example, a math equation \(a^2 + b^2 = c^2\).
+Put some introductory content here. (ex. links to bioinformatics.ca, general info)
 
-\section{Usage}\label{usage}
+\section{Class Photo}\label{class-photo}
 
-Each \textbf{bookdown} chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter \emph{must} start with a first-level heading: \texttt{\#\ A\ good\ chapter}, and can contain one (and only one) first-level heading.
+\textless- Replace the file address to your actual class photo file location
 
-Use second-level and higher headings within chapters like: \texttt{\#\#\ A\ short\ section} or \texttt{\#\#\#\ An\ even\ shorter\ section}.
+\section{{[}USE BELOW FOR REFERENCE, DELETE FOR THE ACTUAL WORKSHOP{]}}\label{use-below-for-reference-delete-for-the-actual-workshop}
 
-The \texttt{index.Rmd} file is required, and is also your first book chapter. It will be the homepage when you render the book.
+Notes:
+is the notation for making a comment in a .R/md file. The comment begins after symbols.
 
-\section{Render book}\label{render-book}
+Some explanations for this template will be in these comments.
 
-You can render the HTML version of this example book without changing anything:
+You can instantly make a comment by clicking on the line with the text you want to comment and using the keyboard command: \texttt{cmd/ctrl} + \texttt{shift} + \texttt{c}.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Find the \textbf{Build} pane in the RStudio IDE, and
-\item
-  Click on \textbf{Build Book}, then select your output format, or select ``All formats'' if you'd like to use multiple formats from the same book source files.
-\end{enumerate}
+Content that you should replace is written in square brackets {[}insert here{]}.
 
-Or build the book from the R console:
+\chapter{Introduction}\label{introduction}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{render\_book}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+Welcome to CBW's {[}workshop name, year{]} Workshop!
 
-To render this example to PDF as a \texttt{bookdown::pdf\_book}, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+\section{Pre-Workshop Materials}\label{pre-workshop-materials}
 
-\section{Preview book}\label{preview-book}
+Click \href{}{here} for your prework!
 
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in ``Preview book'', or from the R console:
+\section{Meet Your Faculty}\label{meet-your-faculty}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{bookdown}\SpecialCharTok{::}\FunctionTok{serve\_book}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+Here's your team!
 
-\chapter{Hello bookdown}\label{hello-bookdown}
+\subsection*{Instructor, TA, \ldots{}}\label{instructor-ta}
+\addcontentsline{toc}{subsection}{Instructor, TA, \ldots{}}
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
+\begin{quote}
+Job Title
+Company/University/\ldots{}
+Location
 
-\section{A section}\label{a-section}
+--- contact information
+\end{quote}
 
-All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
+{[}insert description of the person{]}
 
-\subsection*{An unnumbered section}\label{an-unnumbered-section}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+\subsection*{Michelle Brazas, PhD}\label{michelle-brazas-phd}
+\addcontentsline{toc}{subsection}{Michelle Brazas, PhD}
 
-Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
+\begin{figure}
+\centering
+\includegraphics{./img/faculty/michelle-brazas.jpg}
+\caption{Photo of Michelle Brazas}
+\end{figure}
+
+\begin{quote}
+Scientific Director
+Canadian Bioinformatics Workshops (CBW)
+Toronto, ON, CA
+
+--- \href{mailto:support@bioinformatics.ca}{\nolinkurl{support@bioinformatics.ca}}
+\end{quote}
+
+Dr.~Michelle Brazas is the Associate Director for Adaptive Oncology at the Ontario Institute for
+Cancer Research (OICR), and acting Scientific Director at Bioinformatics.ca. Previously, Dr.
+Brazas was the Program Manager for Bioinformatics.ca and a faculty member in
+Biotechnology at BCIT. Michelle co-founded and runs the Toronto Bioinformatics User Group
+(TorBUG) now in its 11th season, and plays an active role in the International Society of
+Computational Biology where she sits on the Board of Directors and Executive Board.
+
+\subsection*{\texorpdfstring{Nia Hughes (she/her) }{Nia Hughes (she/her) }}\label{nia-hughes-sheher}
+\addcontentsline{toc}{subsection}{Nia Hughes (she/her) }
+
+asdsadadsa
+\includegraphics{./img/faculty/nia-hughes.jpeg}
+
+\begin{quote}
+Program Manager, Bioinformatics.ca
+Ontario Institute for Cancer Research
+Toronto, ON, Canada
+
+--- \href{mailto:nia.hughes@oicr.on.ca}{\nolinkurl{nia.hughes@oicr.on.ca}}
+\end{quote}
+
+Nia is the Program Manager for Bioinformatics.ca, where she coordinates the Canadian
+Bioinformatics Workshop Series. Prior to starting at OICR, she completed her M.Sc. in
+Bioinformatics from the University of Guelph in 2020 before working there as a
+bioinformatician studying epigenetic and transcriptomic patterns across maize varieties.
 
 \chapter{Cross-references}\label{cross}
 
