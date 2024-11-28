@@ -13,3 +13,4 @@ template-references
 comments
 content-in-square-brackets
 module-1
+module-2
