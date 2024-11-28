@@ -1,4 +1,17 @@
 eq:binom
+welcome
+course-schedule
+pre-workshop-materials
+slidedecks-other-content
+downloads
+meet-your-faculty
+instructor-ta
+michelle-brazas-phd
+nia-hughes-sheher
+class-photo
+template-references
+comments
+content-in-square-brackets
 parts
 footnotes-and-citations
 footnotes

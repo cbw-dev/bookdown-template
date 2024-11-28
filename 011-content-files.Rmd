@@ -1,10 +1,10 @@
-## Pre-workshop Materials {-}
+## Pre-workshop Materials
 
 Click [here](insert link here) for your prework!
 
 <!-- You can insert more here -->
 
-## Slidedecks & Other Content {-}
+## Slidedecks & Other Content
 
 <!-- Insert slideshows as pdfs with this markdown code -->
 
@@ -12,6 +12,6 @@ Click [here](insert link here) for your prework!
 
 <!-- Try to keep slideshows as pdfs for accessibility, slideshows from google slides can be inserted by pasting in the html code to share it into your markdown -->
 
-## Downloads {-}
+## Downloads
 
 Insert downloads (ex. datasets) or other tech instructions here (ex. AWS Instructions)

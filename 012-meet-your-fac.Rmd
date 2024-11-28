@@ -1,8 +1,8 @@
-## Meet Your Faculty {-}
+## Meet Your Faculty
 
 Here's your team!
 
-### Instructor, TA, ... {-}
+### Instructor, TA, ...
 
 >Job Title <br>
 Company/University/... <br>
@@ -12,7 +12,7 @@ Location
 
 [insert description of the person]
 
-### Michelle Brazas, PhD {-}
+### Michelle Brazas, PhD
 
 ![Photo of Michelle Brazas](./img/faculty/michelle-brazas.jpg)\
 
@@ -29,7 +29,7 @@ Biotechnology at BCIT. Michelle co-founded and runs the Toronto Bioinformatics U
 (TorBUG) now in its 11th season, and plays an active role in the International Society of
 Computational Biology where she sits on the Board of Directors and Executive Board.
 
-### Nia Hughes (she/her) </font> {-}
+### Nia Hughes (she/her)
 
 ![Photo of Nia Hughes](./img/faculty/nia-hughes.jpeg)\
 
@@ -44,7 +44,7 @@ Bioinformatics Workshop Series. Prior to starting at OICR, she completed her M.S
 Bioinformatics from the University of Guelph in 2020 before working there as a
 bioinformatician studying epigenetic and transcriptomic patterns across maize varieties.
 
-## Class Photo {-}
+## Class Photo
 
 <!-- ![Class Photo](./img/class-photo.jpg) --> <- Replace the file address to your actual class photo file location
 

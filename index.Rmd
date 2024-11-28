@@ -14,7 +14,7 @@ github-repo: rstudio/bookdown-demo
 favicon: img/favicon.ico
 ---
 
-# Welcome {-}
+# Welcome
 
 Welcome to CBW’s [workshop name, year] Workshop!
 
