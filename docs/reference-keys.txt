@@ -12,5 +12,6 @@ class-photo
 template-references
 comments
 content-in-square-brackets
+quick-formatting
 module-1
 module-2
