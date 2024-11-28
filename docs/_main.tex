@@ -146,6 +146,8 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\chapter{(PART) Introduction}\label{part-introduction}
+
 \chapter{Welcome}\label{welcome}
 
 Welcome to CBW's {[}workshop name, year{]} Workshop!
@@ -242,15 +244,55 @@ You can instantly make a comment by clicking on the line with the text you want 
 
 Content that you should replace is written in square brackets {[}insert here{]}.
 
-\chapter{Parts}\label{parts}
+\part{Modules}\label{part-modules}
 
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
+\chapter{Module 1}\label{module-1}
 
-Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
+Put your content (maybe even pdfs and slides ????) here.
 
-Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
+These pages should be a rendered and compiled version of your code, if you have code.
 
-Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
+R, python, bash and more can run in bookdown.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# This is R}
+\NormalTok{x }\OtherTok{\textless{}{-}} \DecValTok{42}
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 42
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# This is python}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"hello world"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## hello world
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# This is bash}
+\BuiltInTok{pwd}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-template
+\end{verbatim}
+
+Try running these code ``chunks'' by pressing the green (left-pointing) triangle next to your code chunks.
+
+You will see the code run in the console and the output provided below the code chunk.
+
+The output of the code will also be produced under the code chunk on your wesbite page.
 
 \chapter{Footnotes and citations}\label{footnotes-and-citations}
 

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Footnotes and citations | [Name of Workshop][Year]</title>
+  <title>Module 1 | [Name of Workshop][Year]</title>
   <meta name="description" content="CBW’s Bookdown Template for Workshops" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Footnotes and citations | [Name of Workshop][Year]" />
+  <meta property="og:title" content="Module 1 | [Name of Workshop][Year]" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="CBW’s Bookdown Template for Workshops" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Footnotes and citations | [Name of Workshop][Year]" />
+  <meta name="twitter:title" content="Module 1 | [Name of Workshop][Year]" />
   
   <meta name="twitter:description" content="CBW’s Bookdown Template for Workshops" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="module-1.html"/>
-<link rel="next" href="blocks.html"/>
+<link rel="prev" href="welcome.html"/>
+<link rel="next" href="footnotes-and-citations.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -231,43 +231,33 @@ BUT CHANGE THE FILE LOCATION TO THE FILE LOCATION OF YOUR LOGO]
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="footnotes-and-citations" class="section level1 hasAnchor">
-<h1>Footnotes and citations<a href="footnotes-and-citations.html#footnotes-and-citations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="footnotes" class="section level2 hasAnchor">
-<h2>Footnotes<a href="footnotes-and-citations.html#footnotes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Footnotes are put inside the square brackets after a caret <code>^[]</code>. Like this one <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
-</div>
-<div id="citations" class="section level2 hasAnchor">
-<h2>Citations<a href="footnotes-and-citations.html#citations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Reference items in your bibliography file(s) using <code>@key</code>.</p>
-<p>For example, we are using the <strong>bookdown</strong> package <span class="citation">(<a href="#ref-R-bookdown">Xie 2024</a>)</span> (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(<a href="#ref-xie2015">Xie 2015</a>)</span> (this citation was added manually in an external file book.bib).
-Note that the <code>.bib</code> files need to be listed in the index.Rmd with the YAML <code>bibliography</code> key.</p>
-<p>The RStudio Visual Markdown Editor can also make it easier to insert citations: <a href="https://rstudio.github.io/visual-markdown-editing/#/citations" class="uri">https://rstudio.github.io/visual-markdown-editing/#/citations</a></p>
+<div id="module-1" class="section level1 hasAnchor">
+<h1>Module 1<a href="module-1.html#module-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Put your content (maybe even pdfs and slides ????) here.</p>
+<p>These pages should be a rendered and compiled version of your code, if you have code.</p>
+<p>R, python, bash and more can run in bookdown.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="module-1.html#cb1-1" tabindex="-1"></a><span class="co"># This is R</span></span>
+<span id="cb1-2"><a href="module-1.html#cb1-2" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb1-3"><a href="module-1.html#cb1-3" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## [1] 42</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="module-1.html#cb3-1" tabindex="-1"></a><span class="co"># This is python</span></span>
+<span id="cb3-2"><a href="module-1.html#cb3-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;hello world&quot;</span>)</span></code></pre></div>
+<pre><code>## hello world</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="module-1.html#cb5-1" tabindex="-1"></a><span class="co"># This is bash</span></span>
+<span id="cb5-2"><a href="module-1.html#cb5-2" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div>
+<pre><code>## /Users/jqiu/Documents/CBWgithub/cbw-dev-templates-docs/bookdown-template</code></pre>
+<p>Try running these code “chunks” by pressing the green (left-pointing) triangle next to your code chunks.</p>
+<p>You will see the code run in the console and the output provided below the code chunk.</p>
+<p>The output of the code will also be produced under the code chunk on your wesbite page.</p>
 
-</div>
-</div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div id="ref-xie2015" class="csl-entry">
-Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
-</div>
-<div id="ref-R-bookdown" class="csl-entry">
-———. 2024. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>This is a footnote.<a href="footnotes-and-citations.html#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="module-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="blocks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="welcome.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="footnotes-and-citations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -298,7 +288,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-citations.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/020-module-1.Rmd",
 "text": "Edit"
 },
 "history": {

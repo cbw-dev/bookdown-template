@@ -1,4 +1,5 @@
 eq:binom
+part-introduction
 welcome
 course-schedule
 pre-workshop-materials
@@ -12,7 +13,7 @@ class-photo
 template-references
 comments
 content-in-square-brackets
-parts
+module-1
 footnotes-and-citations
 footnotes
 citations
