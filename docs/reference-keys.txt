@@ -1,4 +1,3 @@
-part-introduction
 welcome
 course-schedule
 pre-workshop-materials
