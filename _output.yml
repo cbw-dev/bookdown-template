@@ -8,13 +8,12 @@ bookdown::gitbook:
       after: |
         <h1 id="sponsors">Sponsors</h1>
 
-        # put the original text in comments
-
-        [create "your sponsor logo here" images, include multiple so please can just copy and paste in]
-        <img src="img/favicon.ico">
+        <img src="img/sponsors/Your-Sponsor-Here.svg" width=100%> <!--- replace the directory with your sponsor logo --->
+        <img src="img/sponsors/Your-Sponsor-Here.svg" width=100%> <!--- replace the directory with your sponsor logo --->
+        <img src="img/sponsors/Your-Sponsor-Here.svg" width=100%> <!--- replace the directory with your sponsor logo --->
 
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
+    edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s # REPLACE THIS (Julia still needs to configure wiht this a bit)
     download: ["pdf", "epub"]
   number_sections: false
 bookdown::pdf_book:
