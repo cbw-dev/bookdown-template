@@ -1,5 +1,9 @@
 # Module 2
 
+## Lecture
+
+## Lab
+
 put some example of producing images, show chunk options
 
 ```{r, pressure-plot, echo=FALSE}

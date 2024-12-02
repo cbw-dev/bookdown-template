@@ -8,10 +8,9 @@ bookdown::gitbook:
       after: |
         <h1 id="sponsors">Sponsors</h1>
 
-        [DELETE THIS, <br>
-        INSERT YOUR SPONSOR LOGOS HERE, <br>
-        USE THE FORMATTING GIVEN BELOW, <br>
-        BUT CHANGE THE FILE LOCATION TO THE FILE LOCATION OF YOUR LOGO]
+        # put the original text in comments
+
+        [create "your sponsor logo here" images, include multiple so please can just copy and paste in]
         <img src="img/favicon.ico">
 
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>

@@ -16,6 +16,8 @@ favicon: img/favicon.ico
 
 # (PART) Introduction {-}
 
+- try to make a separate page
+
 # Welcome
 
 Welcome to CBW’s [workshop name, year] Workshop!

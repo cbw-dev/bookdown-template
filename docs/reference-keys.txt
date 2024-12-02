@@ -1,8 +1,7 @@
 welcome
 course-schedule
 pre-workshop-materials
-slidedecks-other-content
-downloads
+computing-setup-downloads
 meet-your-faculty
 instructor-ta
 michelle-brazas-phd
@@ -13,4 +12,9 @@ comments
 content-in-square-brackets
 quick-formatting
 module-1
+lecture
+downloads
+lab
 module-2
+lecture-1
+lab-1
