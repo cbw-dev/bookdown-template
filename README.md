@@ -11,8 +11,5 @@ Development Notes:
 index.Rmd HTML metadata ? - not that important, we can care about this later
  
 BUGS:
-- Alt text bug, if not immediately following or followed by a paragraph, 
-- backup html version: <img src="./img/faculty/nia-hughes.jpeg" alt="Description of the image">
-- maybe raise an issue
 
 - figure out good naming convention for files
