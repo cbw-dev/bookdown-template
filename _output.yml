@@ -1,7 +1,7 @@
 bookdown::gitbook:
-  css: style.css
+  css: style.css # This is how bookdown knows to look at style.css for formatting
   config:
-    toc:
+    toc: # Table of Contents
       before: |
         <img src="img/bioinformatics.ca-logo.svg" width=100%>
         <li><a href="./">[YOUR WORKSHOP NAME]</a></li>
