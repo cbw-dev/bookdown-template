@@ -13,7 +13,7 @@ bookdown::gitbook:
         <img src="img/sponsors/Your-Sponsor-Here.svg" width=100%> <!--- replace the directory with your sponsor logo --->
 
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s # REPLACE THIS (Julia still needs to configure wiht this a bit)
+    edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s # REPLACE THIS (Julia still needs to configure with this a bit)
     download: ["pdf", "epub"]
   number_sections: false
 bookdown::pdf_book:
