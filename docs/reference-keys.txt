@@ -7,10 +7,6 @@ instructor-ta
 michelle-brazas-phd
 nia-hughes-sheher
 class-photo
-template-references
-comments
-content-in-square-brackets
-quick-formatting
 module-1
 lecture
 downloads
