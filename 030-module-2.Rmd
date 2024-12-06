@@ -6,7 +6,7 @@
 
 put some example of producing images, show chunk options
 
-```{r, pressure-plot, echo=FALSE}
+```{r, pressure-plot, echo=FALSE}, 
 plot(pressure)
 ```
 
