@@ -5,12 +5,12 @@ date: "[Insert dates of the workshop]"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
-# cover-image: path to the social sharing image like images/cover.jpg
+url: https://cbw-dev.github.io/bookdown-template/ # [CHANGE THIS LINK TO YOUR LANDING PAGE LINK]
+cover-image: img/bioinformatics.ca-logo.svg # change this to the CBW icon for your workshop
 description: |
   CBW's Bookdown Template for Workshops
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: cbw-dev/bookdown-template # change this to your own repo
 favicon: img/favicon.ico
 ---
 
