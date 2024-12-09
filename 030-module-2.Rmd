@@ -4,10 +4,25 @@
 
 ## Lab
 
-put some example of producing images, show chunk options
+<!-- ERIC TEST -->
 
-```{r, pressure-plot, echo=FALSE}, 
-plot(pressure)
-```
+:::: {.blackbox data-latex=""}
+::: {.center data-latex=""}
+**NOTICE!**
+:::
 
-- include formatting options
+TESTING CALLOUT BLOCKS
+::::
+
+<!-- Test: Go to preamble.tex, and comment out lines 2-9,  ctrl+shift+c-->
+
+
+<!-- Additional Notes for Julia provided below, can ignore -->
+
+<!-- put some example of producing images, show chunk options -->
+
+<!-- ```{r, pressure-plot, echo=FALSE},  -->
+<!-- plot(pressure) -->
+<!-- ``` -->
+
+<!-- - include formatting options -->
