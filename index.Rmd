@@ -18,6 +18,8 @@ favicon: img/favicon.ico
 
 # Welcome
 
+<!-- NOTE: Go to the README.md to help understand what to fill in for this workshop template! -->
+
 Welcome to CBW’s [workshop name, year] Workshop!
 
 <!-- This is your index.Rmd file. It is the mandatory landing page for your website. -->
@@ -25,5 +27,3 @@ Welcome to CBW’s [workshop name, year] Workshop!
 Put some introductory content here. (ex. links to bioinformatics.ca, general info)
 
 <!-- The rest of the content making up the welcome pages are in following files, which begin with "01#-description_of_file" -->
-
-<!-- NOTE: Go to the README.md to help understand what to fill in for this workshop template! -->
