@@ -104,14 +104,30 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-\usepackage{tcolorbox}
 
-\newtcolorbox{blackbox}{
-  colback=black,
-  colframe=orange,
-  coltext=white,
-  boxsep=5pt,
-  arc=4pt}
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+
+% These colours were manually entered, they shouldn't matter unless you want pdf output
+
+\newenvironment{redbox}{
+  \definecolor{shadecolor}{RGB}{243, 154, 157}
+  \color{white}
+  \begin{shaded}}
+ {\end{shaded}}
+
+\newenvironment{bluebox}{
+  \definecolor{shadecolor}{RGB}{172, 210, 237}
+  \color{white}
+  \begin{shaded}}
+ {\end{shaded}}
+
+\newenvironment{greenbox}{
+  \definecolor{shadecolor}{RGB}{141, 181, 128}
+  \color{white}
+  \begin{shaded}}
+ {\end{shaded}}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -289,16 +305,38 @@ The output of the code will also be produced under the code chunk on your websit
 
 \section{Lab}\label{lab-1}
 
-\begin{blackbox}
+\begin{redbox}
 
 \begin{center}
-\textbf{NOTICE!}
+\textbf{WARNING!}
 
 \end{center}
 
-TESTING CALLOUT BLOCKS
+Write your warning text here.
 
-\end{blackbox}
+\end{redbox}
+
+\begin{bluebox}
+
+\begin{center}
+\textbf{NOTE!}
+
+\end{center}
+
+Write your note here.
+
+\end{bluebox}
+
+\begin{greenbox}
+
+\begin{center}
+\textbf{TIP!}
+
+\end{center}
+
+Write your tip here.
+
+\end{greenbox}
 
   \bibliography{book.bib,packages.bib}
 

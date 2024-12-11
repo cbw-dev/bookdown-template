@@ -4,17 +4,33 @@
 
 ## Lab
 
-<!-- ERIC TEST -->
-
-:::: {.blackbox data-latex=""}
+:::: {.redbox data-latex=""}
 ::: {.center data-latex=""}
-**NOTICE!**
+**WARNING!**
 :::
 
-TESTING CALLOUT BLOCKS
+Write your warning text here.
 ::::
 
-<!-- Test: Go to preamble.tex, and comment out lines 2-9,  ctrl+shift+c-->
+<br>
+
+:::: {.bluebox data-latex=""}
+::: {.center data-latex=""}
+**NOTE!**
+:::
+
+Write your note here.
+::::
+
+<br>
+
+:::: {.greenbox data-latex=""}
+::: {.center data-latex=""}
+**TIP!**
+:::
+
+Write your tip here.
+::::
 
 
 <!-- Additional Notes for Julia provided below, can ignore -->

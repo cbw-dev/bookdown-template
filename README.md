@@ -16,7 +16,7 @@ You can instantly make a comment by clicking on the line with the text you want 
 
 ### Content in Square Brackets
 
-Content that you shoulgid replace is written in square brackets [insert here].
+Content that you should replace is written in square brackets [insert here].
 
 *Currently a work-in-progress.*
 

@@ -21,15 +21,29 @@ pre code {
   text-align: center;
 }
 
-.blackbox {
-  padding: 1em;
-  background: black;
-  color: white;
-  border: 2px solid orange;
-  border-radius: 10px;
-}
 .center {
   text-align: center;
+}
+.redbox {
+  padding: 1em;
+  background: #F39A9D;
+  color: white;
+  border: 2px solid #EF6569;
+  border-radius: 10px;
+}
+.bluebox {
+  padding: 1em;
+  background: #ACD2ED;
+  color: white;
+  border: 2px solid #80C2F1;
+  border-radius: 10px;
+}
+.greenbox {
+  padding: 1em;
+  background: #8DB580;
+  color: white;
+  border: 2px solid #65B64A;
+  border-radius: 10px;
 }
 
 /* Insert any of your specific css additions below*/
