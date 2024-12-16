@@ -1,5 +1,3 @@
-fig:nice-fig
-tab:nice-tab
 welcome
 course-schedule
 pre-workshop-materials
@@ -16,9 +14,3 @@ lab
 module-2
 lecture-1
 lab-1
-render-code
-rendering-code
-rendering-code-with-highlights-for-specific-languages
-rendering-and-compiling-code
-code-chunk-options
-code-chunks-for-code-generated-figures-and-tables

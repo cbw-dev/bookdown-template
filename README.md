@@ -21,6 +21,7 @@ Content that you should replace is written in square brackets [insert here].
 *Currently a work-in-progress.*
 
 # Development Notes:
+- BUG: Exported video from youtube
 - Michelle + Nia can update the photos if they want, they're in img/faculty/. (I just took these off the internet, quality might be bad)
 - update favicon.ico with one with highter quality
 - in the upper right corner, there is twitter/facebook/other sharing links, they are based on the 

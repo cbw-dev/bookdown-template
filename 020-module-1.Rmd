@@ -16,9 +16,7 @@ Here is an example of a pdf embedded:
 
 Here is an example of a YouTube video embedded:
 
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/WMP_8RTiv40" title="CBW Bridging Pathology and Genomics 2024 | 04.2: Clinical Reporting pt. 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-^ HEIGHT HAS A BUG
+<iframe width="100%" height=455px src="https://www.youtube.com/embed/WMP_8RTiv40" title="CBW Bridging Pathology and Genomics 2024 | 04.2: Clinical Reporting pt. 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Downloads
 
@@ -51,8 +49,10 @@ print("hello world")
 # Your bash code here
 
 # For example:
-pwd
+#pwd
 ```
+
+<!-- Note, "pwd" is commented out, since it is a bash command, it may cause an error in building for Windows users. -->
 
 Try running these code "chunks" by pressing the green (left-pointing) triangle next to your code chunks. 
 
