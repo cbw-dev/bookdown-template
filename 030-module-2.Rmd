@@ -4,41 +4,209 @@
 
 ## Lab
 
+
+# How to Render/Compile Code {#render-code}
+
+There are many ways to render and compile code using Bookdown!
+
+Here are most of the "language engines" (programming languages) available to render, run and compile in Bookdown!
+
+```{r}
+names(knitr::knit_engines$get())
+```
+## Rendering Code
+
+Just rendering code refers to Bookdown formatting code so that our users can view it. The code does not run or compile. This is very similar to what is shown in 020-module-1.Rmd of the bookdown template. An example is shown below.
+
+````
+```
+insert code here
+```
+````
+
+which appears as
+
+```
+insert code here
+```
+
+These are called "code chunks".
+
+## Rendering Code with Highlights for Specific Languages
+
+Bookdown also highlights (specific to the language) the outputted code for the ease of understanding. To do so, add the name of the language (of the many shown above) after the first  3 ``` ` ``` symbols. Note that the language is not case sensitive (so both "r" and "R" would render the same below). For example:
+
+````
+```r
+x <- 42
+x
+```
+````
+
+renders into: 
+
+```r
+x <- 42
+x
+```
+
+Notice that since `<-` is how to assign values to variables in R, it is highlighted. If we were to replace "r" with a different language, this may not be highlighted (depending if "<-" is a relevant symbol in that language.)
+
+## Rendering and Compiling Code
+
+To have the code actually compile, we need to put "{" and "}" brackets around the language, which we still put after the first 3 ``` ` ``` symbols. For example:
+
+<!-- make the language some arbirtary language, since we just want to show what the code would look like -->
+
+````{r, eval=FALSE, highlight=FALSE}
+```{r}
+x <- 42
+x
+htmltools::HTML('<b>LEFT`RIGHT</b>') htmltools::HTML('<b>LEFT`RIGHT</b>') htmltools::HTML('<b>LEFT`RIGHT</b>')
+```
+````
+
+renders and compiles into: 
+
+```{r}
+x <- 42
+x
+```
+
+The second bar you see is the output of R command!
+
+You can run these "code chunks" without previewing or building the book! To the right of your code chunk, there are 3 symbols (as seen below). 
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWwloWK_sYRV44BYYCC2lhBpxLQQvkSYlJECfHnlYTwg7aPSPgOWuUfp_ybZQkAQ8QYSwUpH378Hv/pub?w=3763&amp;h=1237" alt="Picture of a R code chunk in RStudio">
+
+The <span style="color:#FF0000;">gear symbol</span> leads to more chunk options click on it to see more options.
+
+The <span style="color:#ff9900;">down arrow symbol</span> runs all previous chunks and the current chunk. This is helpful if previous chunks define a variable that you will need in your current chunk.
+
+> **Note:** Hence, we can use variables from previous chunks!
+
+The <span style="color:#05a34f;">right-pointing arrow symbol</span> runs the current code chunk. A rectangular box will appear below your code chunk, with the output of your code.
+
+Additionally, notice that in your bottom left window, any code you run also runs in your console. Both of these ways of checking your code happens for all languages! If you are previewing your book, you must re-preview it, since running the code becomes the new action for your console, instead of previewing the book.
+
 :::: {.redbox data-latex=""}
 ::: {.center data-latex=""}
-**WARNING!**
+**Note!**
 :::
 
-Write your warning text here.
+If you want to run a certain language, you must have the language installed! R and python are already setup for you. (Python relies on the RStudio interface option, reticulate - you can reconfigure this if you'd like.) You may have to configure new languages so that they can run in RStudio, but generally, they should be able to run automatically.
 ::::
 
-<br>
+<p style="font-size: 8px;"></p>
 
 :::: {.bluebox data-latex=""}
 ::: {.center data-latex=""}
-**NOTE!**
+**Exiting the Console**
 :::
 
-Write your note here.
+If you're running R, you don't have to exit the console (we already work in the R console when using Bookdown). However, if you're running a different language (for example, python), you will remain in the Python console, and must exit it to run Bookdown commands. You can look online for different ways to exit certain consoles, but generally running "quit" will return you to the R console.
 ::::
 
 <br>
+Now we know how to both render (just show) and compile (see the output) of our code!
 
-:::: {.greenbox data-latex=""}
-::: {.center data-latex=""}
-**TIP!**
-:::
+## Code Chunk Options
 
-Write your tip here.
-::::
+Bookdown has options that we can include, to help with certain options for our code to appear and what it may produce. 
+
+Generally, the typical structure of adding code chunk options is shown below.
+
+````{r, highlight=FALSE, eval=FALSE}
+```{r, option=VALUE, option=VALUE, ...}
+code
+```
+````
 
 
-<!-- Additional Notes for Julia provided below, can ignore -->
+Some common code chunk options are:
 
-<!-- put some example of producing images, show chunk options -->
+- `echo`
+  - `echo=TRUE` shows the code output (by default, it is on).
+  - `echo=FALSE` hides the code output.
+- `eval`
+  - `eval=TRUE` runs the code (default).
+  - `eval=FALSE` skips the chunk and does not execute the code.
+- `results`
+  - `results='markup'` runs the code (default).
+  - `results='asis'` leaves the output with no additional formatting.
+  - `results='hide'` does not show the output.
+- `include`
+  - `include=TRUE` includes both the code and the output on your website (default).
+  - `include=FALSE` excludes both the code and the output on your website.
 
-<!-- ```{r, pressure-plot, echo=FALSE},  -->
-<!-- plot(pressure) -->
-<!-- ``` -->
+Click <a href="https://bookdown.org/yihui/rmarkdown-cookbook/chunk-options.html" target="_blank">here</a> to find more code chunk options!
 
-<!-- - include formatting options -->
+
+
+## Code Chunks for Code-Generated Figures and Tables
+
+We can use code chunks to help specify certain ways for code-generated figures and tables to appear, and how to link to them!
+
+Generally, this will look like:
+
+````{r, eval=FALSE, highlight=FALSE}
+```{r reference-name, option=VALUE, option=VALUE, ...}
+code that generates an image/table
+```
+````
+
+Then, we can refer to the figure or table generated by the code in this chunk by using `\@ref(fig:reference-name)` or `\@ref(tab:chunk-label)`
+
+For example, an R-generated image can be made using a similar code chunk to the one shown below:
+
+````{r, eval=FALSE, highlight=FALSE}
+See Figure \@ref(fig:nice-fig).
+
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center', fig.alt='Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+````
+
+This renders into:
+
+---
+
+See Figure \@ref(fig:nice-fig).
+
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center', fig.alt='Plot with connected points showing that vapor pressure of mercury increases exponentially as temperature increases.'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+---
+
+Here is an example of a table generated by R from a code chunk:
+
+````{r, eval=FALSE, highlight=FALSE}
+Don't miss Table \@ref(tab:nice-tab).
+
+```{r nice-tab, tidy=FALSE}
+knitr::kable(
+  head(pressure, 10), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
+````
+
+This renders into:
+
+---
+
+Don't miss Table \@ref(tab:nice-tab).
+
+```{r nice-tab, tidy=FALSE}
+knitr::kable(
+  head(pressure, 10), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
+
+---
+
+You can find more inforamtion on figures and tables in Bookdown <a href="https://bookdown.org/yihui/rmarkdown/r-code.html#figures" target="_blank">here</a>!
