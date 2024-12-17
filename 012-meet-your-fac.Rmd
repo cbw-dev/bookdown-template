@@ -4,6 +4,8 @@ Here's your team!
 
 ### Instructor, TA, ...
 
+<!-- ![Photo of Person](img/faculty/person.png) insert image here -->
+
 >Job Title <br>
 Company/University/... <br>
 Location
