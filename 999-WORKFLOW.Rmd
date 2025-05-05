@@ -3,7 +3,6 @@
 - readme.md
   - NOTE that this file is visible on GitHub.com
 - _output.yml - sponsors, blob, logo, title
-  - NOTE blob??? waiting on Julia
 - index.rmd (line by line)
 - faculty
 
