@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Course Schedule | NAME OF WORKSHOP YEAR</title>
+  <title>AWS setup instructions | NAME OF WORKSHOP YEAR</title>
   <meta name="description" content="Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Course Schedule | NAME OF WORKSHOP YEAR" />
+  <meta property="og:title" content="AWS setup instructions | NAME OF WORKSHOP YEAR" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://cbw-dev.github.io/bookdown-template/img/bioinformatics_logo.png" />
   <meta property="og:description" content="Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop" />
   <meta name="github-repo" content="cbw-dev/bookdown-template" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Course Schedule | NAME OF WORKSHOP YEAR" />
+  <meta name="twitter:title" content="AWS setup instructions | NAME OF WORKSHOP YEAR" />
   
   <meta name="twitter:description" content="Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop" />
   <meta name="twitter:image" content="https://cbw-dev.github.io/bookdown-template/img/bioinformatics_logo.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="pre-work.html"/>
+<link rel="prev" href="meet-your-faculty.html"/>
+<link rel="next" href="module-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -147,10 +147,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="part"><span><b>I Introduction</b></span></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
-<li class="chapter" data-level="" data-path="course-schedule.html"><a href="course-schedule.html"><i class="fa fa-check"></i>Course Schedule</a></li>
-<li class="chapter" data-level="" data-path="pre-work.html"><a href="pre-work.html"><i class="fa fa-check"></i>Pre-work</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Workshop Info</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-work"><i class="fa fa-check"></i>Pre-work</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="meet-your-faculty.html"><a href="meet-your-faculty.html"><i class="fa fa-check"></i>Meet Your Faculty</a></li>
+<li class="chapter" data-level="" data-path="aws-setup-instructions.html"><a href="aws-setup-instructions.html"><i class="fa fa-check"></i>AWS setup instructions</a></li>
 <li class="part"><span><b>II Modules</b></span></li>
 <li class="chapter" data-level="" data-path="module-1.html"><a href="module-1.html"><i class="fa fa-check"></i>Module 1</a>
 <ul>
@@ -196,19 +199,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="course-schedule" class="section level1 hasAnchor">
-<h1>Course Schedule<a href="course-schedule.html#course-schedule" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>YOUR SCHEDULE HERE</p>
-<!--Copy paste a table into https://www.tablesgenerator.com/markdown_tables (select convert to markdown) to create a table in markdown.
--->
+<div id="aws-setup-instructions" class="section level1 hasAnchor">
+<h1>AWS setup instructions<a href="aws-setup-instructions.html#aws-setup-instructions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="course-data-downloads" class="section level4 hasAnchor">
+<h4>Course data downloads<a href="aws-setup-instructions.html#course-data-downloads" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Note that some of these files are quite large. If you have issues downloading them, try copying the link address, opening a new blank tab, and entering the URL into the new tab’s address bar. If that fails, contact us at <a href="mailto:info@bioinformatics.ca" class="email">info@bioinformatics.ca</a>.</p>
+<p><a href="https://hpc4health.ca/cbw/2025/ISO-v/scripts_coursedata.zip" class="uri">https://hpc4health.ca/cbw/2025/ISO-v/scripts_coursedata.zip</a><br />
+<a href="https://hpc4health.ca/cbw/2025/ISO-v/data/ffpe_mouse_10x.tar" class="uri">https://hpc4health.ca/cbw/2025/ISO-v/data/ffpe_mouse_10x.tar</a><br />
+<a href="https://hpc4health.ca/cbw/2025/ISO-v/data/frozen_mouse_10x.tar" class="uri">https://hpc4health.ca/cbw/2025/ISO-v/data/frozen_mouse_10x.tar</a><br />
+<a href="https://hpc4health.ca/cbw/2025/ISO-v/data/xenium_mouse_10x.tar" class="uri">https://hpc4health.ca/cbw/2025/ISO-v/data/xenium_mouse_10x.tar</a><br />
+<a href="https://hpc4health.ca/cbw/2025/ISO-v/data/subclass_celltype_label.csv" class="uri">https://hpc4health.ca/cbw/2025/ISO-v/data/subclass_celltype_label.csv</a></p>
 </div>
+<div id="amazon-machine-image" class="section level4 hasAnchor">
+<h4>Amazon Machine Image<a href="aws-setup-instructions.html#amazon-machine-image" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We have made our AWS AMI (Amazon Machine Image) publicly available. To launch your own instance, follow the <a href="https://repost.aws/knowledge-center/launch-instance-custom-ami">instructions provided by Amazon on how to launch an EC2 instance from a custom Amazon Machine Image</a>. Please note that you will need an AWS account to proceed, and that you will need to upload the CourseData files yourself.</p>
+<p>Here are the details of the AMI:</p>
+<p>AWS Region: us-east-1 (N. Virginia)<br />
+AMI type: public image<br />
+AMI name: CBW_ISO_250218<br />
+AMI ID: ami-02bccaa393b482b4d</p>
+<p>If you want to create and activate a new AWS account, please follow <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/">these instructions provided by Amazon</a>.</p>
+
+</div>
+</div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pre-work.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="meet-your-faculty.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="module-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -239,7 +262,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cbw-dev/bookdown-template/blob/main/index.Rmd",
+"link": "https://github.com/cbw-dev/bookdown-template/blob/main/002-computing.Rmd",
 "text": "Edit"
 },
 "history": {

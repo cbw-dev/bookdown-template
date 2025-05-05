@@ -1,6 +1,0 @@
-# Workflow
-- change .Rproj name
-- readme.md
-- _output.yml - sponsors, blob, logo, title
-- index.rmd (line by line)
-

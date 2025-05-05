@@ -2,8 +2,6 @@
 
 # Module 1
 
-Welcome to module 1!
-
 ## Lecture
 
 <!-- Insert slideshows as pdfs with this markdown code -->

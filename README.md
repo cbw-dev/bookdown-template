@@ -1,8 +1,9 @@
-## CBW [Workshop] [Year]
+## CBW WORKSHOP YEAR
 
-[Workshop Website](./)  
-[City], [Province(s)]  
-Instructors: [Instructor names]  
-TAs: [TA names]  
+[Workshop Website](YOUR WORKSHOP URL HERE)
 
-[Outline here]  
+CITY, PROVINCE(S)  
+Instructors: INSTRUCTOR NAMES  
+TAs: TA NAMES
+
+OUTLINE HERE
