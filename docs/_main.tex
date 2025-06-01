@@ -88,15 +88,17 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
@@ -128,23 +130,20 @@
   \color{white}
   \begin{shaded}}
  {\end{shaded}}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={{[}Name of Workshop{]}{[}Year{]}},
-  pdfauthor={Instructors: {[}list instructor names here{]}},
+  pdftitle={Callout Test Page},
+  pdfauthor={Faculty: INSTRUCTOR AND TA NAMES},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{{[}Name of Workshop{]}{[}Year{]}}
-\author{Instructors: {[}list instructor names here{]}}
-\date{{[}Insert dates of the workshop{]}}
+\title{Callout Test Page}
+\author{Faculty: INSTRUCTOR AND TA NAMES}
+\date{DATES}
 
 \begin{document}
 \maketitle
@@ -155,50 +154,59 @@
 }
 \part{Introduction}\label{part-introduction}
 
-\chapter{Welcome}\label{welcome}
+\chapter{Workshop Info}\label{workshop-info}
 
-Welcome to CBW's {[}workshop name, year{]} Workshop!
+Welcome to the YEAR WORKSHOP Canadian Bioinformatics Workshop webpage!
 
-Put some introductory content here. (ex. links to bioinformatics.ca, general info)
+\section{Schedule}\label{schedule}
 
-\chapter{Course Schedule}\label{course-schedule}
+YOUR SCHEDULE HERE
 
-Copy paste a table into \url{https://www.tablesgenerator.com/markdown_tables} (select convert to markdown) to create a table in markdown.
+\section{Pre-work}\label{pre-work}
 
-\section{Pre-workshop Materials}\label{pre-workshop-materials}
+\href{LINK\%20TO\%20PREWORK}{You can find your pre-work here.}
 
-Click \href{insert\%20link\%20here}{here} for your prework!
+In this tutorial, you can choose between using:
 
-\section{Computing Setup \& Downloads}\label{computing-setup-downloads}
+\textbf{16S dataset from wild blueberry, \emph{Vaccinium angustifolium} (soil microbiome)}
+- \href{https://apsjournals.apsnet.org/doi/10.1094/PBIOMES-03-17-0012-R}{Variation in Bacterial and Eukaryotic Communities Associated with Natural and Managed Wild Blueberry Habitats}
+- \href{https://www.frontiersin.org/articles/10.3389/fmicb.2019.01682/full\#B50}{Metagenomic Functional Shifts to Plant Induced Environmental Changes}
 
-Insert downloads (ex. datasets) or other tech instructions here (ex. AWS Instructions)
+\textbf{18S dataset from plastics incubated in a coastal marine environment (plastisphere)}
+- \href{https://www.sciencedirect.com/science/article/pii/S0025326X22003836\#s0050}{Microbial pioneers of plastic colonisation in coastal seawaters}
 
-\section{Meet Your Faculty}\label{meet-your-faculty}
+\textbf{ITS2 dataset from stool samples from pregnant women (gut microbiome)}
+- \href{https://gut.bmj.com/content/73/8/1302.long}{Landscape of the gut mycobiome dynamics during pregnancy and its relationship with host metabolism and pregnancy health}
 
-Here's your team!
+This is a subtle blue tip with a custom lightbulb icon and a left-aligned title.
+The main content can have \textbf{bold} and \emph{italic} text as usual.
 
-\subsection{Instructor, TA, \ldots{}}\label{instructor-ta}
+Your process completed successfully. All data has been saved.
+
+test text
+
+\chapter{Meet Your Faculty}\label{meet-your-faculty}
+
+\subsubsection{NAME}\label{name}
 
 \begin{quote}
-Job Title
-Company/University/\ldots{}
-Location
+JOB TITLE
+INSTITUTION
+LOCATION
 
---- contact information
+--- CONTACT INFO, IF PROVIDED
 \end{quote}
 
-{[}insert description of the person{]}
+BIO GOES HERE
 
-\subsection{Michelle Brazas, PhD}\label{michelle-brazas-phd}
-
-\includegraphics{./img/faculty/michelle-brazas.jpg}\\
+\subsubsection{Michelle Brazas, PhD}\label{michelle-brazas-phd}
 
 \begin{quote}
 Scientific Director
 Canadian Bioinformatics Workshops (CBW)
 Toronto, ON, CA
 
---- \href{mailto:support@bioinformatics.ca}{\nolinkurl{support@bioinformatics.ca}}
+--- \href{mailto:director@bioinformatics.ca}{\nolinkurl{director@bioinformatics.ca}}
 \end{quote}
 
 Dr.~Michelle Brazas is the Associate Director for Adaptive Oncology at the Ontario Institute for
@@ -208,38 +216,37 @@ Biotechnology at BCIT. Michelle co-founded and runs the Toronto Bioinformatics U
 (TorBUG) now in its 11th season, and plays an active role in the International Society of
 Computational Biology where she sits on the Board of Directors and Executive Board.
 
-\subsection{Nia Hughes (she/her)}\label{nia-hughes-sheher}
-
-\includegraphics{./img/faculty/nia-hughes.jpeg}\\
+\subsubsection{Nia Hughes (she/her)}\label{nia-hughes-sheher}
 
 \begin{quote}
-Program Manager, Bioinformatics.ca
+Platform Training Manager, Canadian Bioinformatics Hub
 Ontario Institute for Cancer Research
 Toronto, ON, Canada
 
---- \href{mailto:nia.hughes@oicr.on.ca}{\nolinkurl{nia.hughes@oicr.on.ca}}
+--- \href{mailto:training@bioinformatics.ca}{\nolinkurl{training@bioinformatics.ca}}
 \end{quote}
 
-Nia is the Program Manager for Bioinformatics.ca, where she coordinates the Canadian
-Bioinformatics Workshop Series. Prior to starting at OICR, she completed her M.Sc. in
-Bioinformatics from the University of Guelph in 2020 before working there as a
-bioinformatician studying epigenetic and transcriptomic patterns across maize varieties.
+Nia is the Platform Training Manager for the Canadian Bioinformatics Hub, where she coordinates the Canadian Bioinformatics Workshop Series. Prior to starting at OICR, she completed her M.Sc. in Bioinformatics from the University of Guelph in 2020 before working there as a bioinformatician studying epigenetic and transcriptomic patterns across maize varieties.
 
-\section{Class Photo}\label{class-photo}
+\chapter{Data and Compute Setup}\label{data-and-compute-setup}
 
-\textless- Replace the file address to your actual class photo file location
+\subsubsection{Course data downloads}\label{course-data-downloads}
+
+Coming soon!
+
+\subsubsection{Compute setup}\label{compute-setup}
+
+Coming soon!
 
 \part{Modules}\label{part-modules}
 
 \chapter{Module 1}\label{module-1}
 
-Welcome to module 1!
-
 \section{Lecture}\label{lecture}
 
 Here is an example of a pdf embedded:
 
-\includegraphics[width=1\textwidth,height=9.375in]{content-files/sample-pdf.pdf}~
+\includegraphics[width=1\linewidth,height=9.375in]{content-files/sample-pdf.pdf}~
 
 Here is an example of a YouTube video embedded:
 
@@ -293,11 +300,110 @@ You will see the code run in the console and the output provided below the code 
 
 The output of the code will also be produced under the code chunk on your website page.
 
-\chapter{Module 2}\label{module-2}
+\chapter{Callout Tests}\label{callout-tests}
 
-\section{Lecture}\label{lecture-1}
+This page tests the static and dropdown callout blocks.
 
-\section{Lab}\label{lab-1}
+\section{Regular Callouts}\label{regular-callouts}
+
+\subsection{Red Regular}\label{red-regular}
+
+\textbf{Static:}
+
+This is a regular red static callout.
+It can contain \texttt{inline\ code} and also:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# R code block}
+\FunctionTok{print}\NormalTok{(}\StringTok{"Hello from static red!"}\NormalTok{)}
+\NormalTok{x }\OtherTok{\textless{}{-}} \DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+More text after the code block.
+
+\textbf{Dropdown:}
+
+This is the content of a regular red dropdown.
+It can contain \texttt{inline\ code} and also:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# R code block}
+\FunctionTok{print}\NormalTok{(}\StringTok{"Hello from dropdown red!"}\NormalTok{)}
+\NormalTok{y }\OtherTok{\textless{}{-}} \DecValTok{2} \SpecialCharTok{*} \DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+
+More text after the code block.
+
+\subsection{Blue Regular}\label{blue-regular}
+
+\textbf{Static:}
+
+This blue static callout uses a specific icon.
+
+\textbf{Dropdown:}
+
+Details for the blue dropdown.
+
+\subsection{Green Regular (No Icon)}\label{green-regular-no-icon}
+
+\textbf{Static:}
+
+This green static callout has no icon.
+
+\textbf{Dropdown:}
+
+Content for the green dropdown without an icon.
+
+\section{Important Callouts}\label{important-callouts}
+
+\subsection{Red Important}\label{red-important}
+
+\textbf{Static:}
+
+This is an important red static callout.
+
+\textbf{Dropdown:}
+
+Content of the important red dropdown.
+
+\subsection{Yellow Important}\label{yellow-important}
+
+\textbf{Static:}
+
+This is an important yellow static callout.
+
+\textbf{Dropdown:}
+
+Content of the important yellow dropdown.
+
+\section{Subtle Callouts}\label{subtle-callouts}
+
+\subsection{Purple Subtle}\label{purple-subtle}
+
+\textbf{Static:}
+
+A subtle purple idea, presented statically.
+
+\textbf{Dropdown:}
+
+Details of the subtle purple idea in a dropdown.
+
+\subsection{Gray Subtle (No Title)}\label{gray-subtle-no-title}
+
+\textbf{Static:}
+
+This is a subtle gray static callout with no explicit title.
+The icon should still align with the first line of text.
+
+\textbf{Dropdown:}
+
+This is a subtle gray dropdown with no explicit title (will default to ``Details'').
+The icon should align with the ``Details'' text in the summary.
+Content is here.
 
   \bibliography{book.bib,packages.bib}
 
