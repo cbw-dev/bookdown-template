@@ -15,3 +15,35 @@ Coming soon!
 
 #### Compute setup
 Coming soon!
+
+
+:::: {.callout type="red" style="subtle" title="Subtle Red Title (No Icon)" icon="false" collapsible="true"}
+
+This is the content of your subtle red callout.
+It will have a subtle red left border and a light background, but no icon will be displayed next to the title.
+
+You can include any Markdown content here:
+
+* Like lists
+* Or `inline code`.
+
+::::
+
+:::: {.callout type="green" title="Task Complete!" icon="fas fa-rocket" center_title="true"}
+
+Congratulations! The process finished successfully.
+
+- All data saved.
+- Report generated.
+
+::::
+
+:::: {.callout type="red" style="important" title="CRITICAL WARNING" icon="fas fa-triangle-exclamation"}
+
+System integrity is compromised. Immediate action required.
+Please check the `error_log.txt` file for details.
+
+::::
+
+
+

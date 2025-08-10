@@ -29,6 +29,53 @@ After workshop concludes, YOUR EMBED CODE HERE-->
 <!--Copy paste a table into https://www.tablesgenerator.com/markdown_tables (select convert to markdown) to create a table in markdown.   
 -->
 
+
+```{r schedule-loader, echo=FALSE, message=FALSE, warning=FALSE}
+# 1. Load necessary libraries
+# You may need to run install.packages(c("readr", "jsonlite", "htmltools"))
+library(readr)
+library(jsonlite)
+library(htmltools)
+
+# 2. Define the paths to your data and template files
+csv_path <- "schedule.csv"
+template_path <- "schedule-template.html"
+
+# 3. Check if the files exist before proceeding
+if (!file.exists(csv_path)) {
+  stop("Error: 'schedule.csv' not found. Please create it in your project directory.")
+}
+if (!file.exists(template_path)) {
+  stop("Error: 'schedule-template.html' not found. Please ensure it is in your project directory.")
+}
+
+# 4. Read the schedule data from the CSV file, ensuring all columns are read as text.
+# This is the most robust way to prevent readr from auto-formatting time columns and to handle a flexible number of timezone columns.
+schedule_df <- readr::read_csv(
+  csv_path, 
+  col_types = cols(.default = "c"), 
+  show_col_types = FALSE
+)
+
+
+# 5. Convert the R data frame to a JSON object
+# This JSON object will be passed to the JavaScript in the HTML template
+schedule_json <- jsonlite::toJSON(schedule_df, auto_unbox = TRUE)
+
+# 6. Create a <script> tag to inject the JSON data into the page
+# This makes the data available to the template's JavaScript code
+data_injection_script <- tags$script(
+  HTML(paste0("window.scheduleData = ", schedule_json, ";"))
+)
+
+# 7. Combine the data script and the HTML template for final output
+# This ensures the data is available before the template tries to use it
+tagList(
+  data_injection_script,
+  includeHTML(template_path)
+)
+```
+
 ## Pre-work
 
 <!--[You can find your pre-work here.](LINK TO PREWORK)

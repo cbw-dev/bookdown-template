@@ -1,4 +1,4 @@
--- callouts_conditional.lua
+-- callouts.lua
 -- Handles static, regular/important/subtle dropdowns, and plain dropdowns.
 
 local function get_default_icon(type)
