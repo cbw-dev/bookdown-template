@@ -29,7 +29,7 @@ jobs:
           echo "FACULTY=$(jq -r .faculty workshop_config.json)" >> $GITHUB_ENV
 
           # Check the key variable and set a true/false output for the next steps
-          if [[ "$(jq -r .workshop_code workshop_config.json)" == "ENTER_WORKSHOP_CODE_HERE" ]]; then
+          if [[ "$(jq -r .workshop_code workshop_config.json)" == "Workshop Code (e.g. INR_Mon-2510)" ]]; then
             echo "is_configured=false" >> $GITHUB_OUTPUT
             echo "Configuration not complete. Halting."
           else
