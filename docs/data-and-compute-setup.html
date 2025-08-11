@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Data and Compute Setup | NAME OF WORKSHOP YEAR</title>
-  <meta name="description" content="Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop" />
+  <title>Data and Compute Setup | {{Workshop Name}} {{Year}}</title>
+  <meta name="description" content="Workshop website for the {{Year}} {{Workshop Name}} Canadian Bioinformatics Workshop" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Data and Compute Setup | NAME OF WORKSHOP YEAR" />
+  <meta property="og:title" content="Data and Compute Setup | {{Workshop Name}} {{Year}}" />
   <meta property="og:type" content="book" />
-  <meta property="og:image" content="https://cbw-dev.github.io/bookdown-template/img/bioinformatics_logo.png" />
-  <meta property="og:description" content="Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop" />
-  <meta name="github-repo" content="cbw-dev/bookdown-template" />
+  <meta property="og:image" content="https://bioinformaticsdotca.github.io/{{Code}}/img/bioinformatics_logo.png" />
+  <meta property="og:description" content="Workshop website for the {{Year}} {{Workshop Name}} Canadian Bioinformatics Workshop" />
+  <meta name="github-repo" content="bioinformaticsdotca/{{Code}}" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Data and Compute Setup | NAME OF WORKSHOP YEAR" />
+  <meta name="twitter:title" content="Data and Compute Setup | {{Workshop Name}} {{Year}}" />
   
-  <meta name="twitter:description" content="Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop" />
-  <meta name="twitter:image" content="https://cbw-dev.github.io/bookdown-template/img/bioinformatics_logo.png" />
+  <meta name="twitter:description" content="Workshop website for the {{Year}} {{Workshop Name}} Canadian Bioinformatics Workshop" />
+  <meta name="twitter:image" content="https://bioinformaticsdotca.github.io/{{Code}}/img/bioinformatics_logo.png" />
 
-<meta name="author" content="Faculty: INSTRUCTOR AND TA NAMES" />
+<meta name="author" content="Faculty: {{Faculty Names Separated By Commas}}" />
 
 
 
@@ -52,6 +52,28 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "{{Workshop Name}}",
+  "description": "The complete set of tutorials, slides, and practical exercises for the {{Workshop Name}} {{Year}} Canadian Bioinformatics Workshop, hosted on GitHub Pages.",
+  "url": "https://bioinformaticsdotca.github.io/{{Code}}",
+  "learningResourceType": ["tutorial", "slides", "exercise"],
+  "inLanguage": "en",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "provider": {
+    "@type": "Organization",
+    "name": "Bioinformatics.ca",
+    "url": "https://bioinformatics.ca"
+  },
+  "keywords": "bioinformatics, microbiome, 16S, metagenomics, R, tutorial, slides",
+  "isPartOf": {
+    "@type": "Course",
+    "@id": "{{Bioinformatics.ca Workshop URL}}"
+  }
+}
+</script>
 
 
 
@@ -76,9 +98,9 @@
 <a href="https://bioinformaticsdotca.github.io/">
  <img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
  </a>
-<li><center><strong><a href="./"><br>YOUR WORKSHOP NAME<br><br></a></strong></center></li>
+<li><center><strong><a href="./"><br>{{Workshop Name}}<br><br></a></strong></center></li>
 <a href="./">
- <img src="img/MISSINGLOGO.PNG" width="70%" alt="WORKSHOP NAME logo" style="display:block; margin-left:auto; margin-right:auto; ">
+ <img src="img/missingLogo.png" width="70%" alt="{{Workshop Name}} logo" style="display:block; margin-left:auto; margin-right:auto; ">
  </a>
 <br>
 
@@ -132,7 +154,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">NAME OF WORKSHOP YEAR</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">{{Workshop Name}} {{Year}}</a>
           </h1>
         </div>
 
@@ -149,43 +171,6 @@
 <div id="compute-setup" class="section level4 hasAnchor">
 <h4>Compute setup<a href="data-and-compute-setup.html#compute-setup" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Coming soon!</p>
-<details class="callout-dropdown callout-subtle callout-red-subtle">
-<summary class="callout-dropdown-summary"><span class="callout-dropdown-title">Subtle Red Title (No
-Icon)</span><span
-class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span></summary>
-<div class="callout-dropdown-content">
-<p>This is the content of your subtle red callout.
-It will have a subtle red left border and a light background, but no icon will be displayed next to the title.</p>
-<p>You can include any Markdown content here:</p>
-<ul>
-<li>Like lists</li>
-<li>Or <code>inline code</code>.</li>
-</ul>
-</div>
-</details>
-<div class="callout-green">
-<span class="callout-icon"><i class="fas fa-rocket" aria-hidden="true"></i></span>
-<div class="callout-content">
-<div class="callout-title-static center" style="margin-bottom: 0.5em;">
-<p>Task Complete!</p>
-</div>
-<p>Congratulations! The process finished successfully.</p>
-<ul>
-<li>All data saved.</li>
-<li>Report generated.</li>
-</ul>
-</div>
-</div>
-<div class="callout-red-important">
-<span class="callout-icon"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i></span>
-<div class="callout-content">
-<div class="callout-title-static" style="margin-bottom: 0.5em;">
-<p>CRITICAL WARNING</p>
-</div>
-<p>System integrity is compromised. Immediate action required.
-Please check the <code>error_log.txt</code> file for details.</p>
-</div>
-</div>
 
 </div>
 </div>
@@ -229,7 +214,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/cbw-dev/bookdown-template/blob/main/002-computing.Rmd",
+    "link": "https://github.com/bioinformaticsdotca/{{Code}}/blob/main/002-computing.Rmd",
     "text": "Edit"
   },
   "history": {

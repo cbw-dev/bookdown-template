@@ -1,5 +1,7 @@
 # Meet Your Faculty
 
+Coming soon!
+
 <!--#### NAME
 
 <img src="./img/faculty/MISSINGHEADSHOT.PNG" width="200" alt="Photo of NAME">

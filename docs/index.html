@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>NAME OF WORKSHOP YEAR</title>
-  <meta name="description" content="Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop" />
+  <title>{{Workshop Name}} {{Year}}</title>
+  <meta name="description" content="Workshop website for the {{Year}} {{Workshop Name}} Canadian Bioinformatics Workshop" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="NAME OF WORKSHOP YEAR" />
+  <meta property="og:title" content="{{Workshop Name}} {{Year}}" />
   <meta property="og:type" content="book" />
-  <meta property="og:image" content="https://cbw-dev.github.io/bookdown-template/img/bioinformatics_logo.png" />
-  <meta property="og:description" content="Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop" />
-  <meta name="github-repo" content="cbw-dev/bookdown-template" />
+  <meta property="og:image" content="https://bioinformaticsdotca.github.io/{{Code}}/img/bioinformatics_logo.png" />
+  <meta property="og:description" content="Workshop website for the {{Year}} {{Workshop Name}} Canadian Bioinformatics Workshop" />
+  <meta name="github-repo" content="bioinformaticsdotca/{{Code}}" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="NAME OF WORKSHOP YEAR" />
+  <meta name="twitter:title" content="{{Workshop Name}} {{Year}}" />
   
-  <meta name="twitter:description" content="Workshop website for the YEAR WORKSHOP Canadian Bioinformatics Workshop" />
-  <meta name="twitter:image" content="https://cbw-dev.github.io/bookdown-template/img/bioinformatics_logo.png" />
+  <meta name="twitter:description" content="Workshop website for the {{Year}} {{Workshop Name}} Canadian Bioinformatics Workshop" />
+  <meta name="twitter:image" content="https://bioinformaticsdotca.github.io/{{Code}}/img/bioinformatics_logo.png" />
 
-<meta name="author" content="Faculty: INSTRUCTOR AND TA NAMES" />
+<meta name="author" content="Faculty: {{Faculty Names Separated By Commas}}" />
 
 
 
@@ -52,6 +52,28 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "{{Workshop Name}}",
+  "description": "The complete set of tutorials, slides, and practical exercises for the {{Workshop Name}} {{Year}} Canadian Bioinformatics Workshop, hosted on GitHub Pages.",
+  "url": "https://bioinformaticsdotca.github.io/{{Code}}",
+  "learningResourceType": ["tutorial", "slides", "exercise"],
+  "inLanguage": "en",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "provider": {
+    "@type": "Organization",
+    "name": "Bioinformatics.ca",
+    "url": "https://bioinformatics.ca"
+  },
+  "keywords": "bioinformatics, microbiome, 16S, metagenomics, R, tutorial, slides",
+  "isPartOf": {
+    "@type": "Course",
+    "@id": "{{Bioinformatics.ca Workshop URL}}"
+  }
+}
+</script>
 
 
 
@@ -76,9 +98,9 @@
 <a href="https://bioinformaticsdotca.github.io/">
  <img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
  </a>
-<li><center><strong><a href="./"><br>YOUR WORKSHOP NAME<br><br></a></strong></center></li>
+<li><center><strong><a href="./"><br>{{Workshop Name}}<br><br></a></strong></center></li>
 <a href="./">
- <img src="img/MISSINGLOGO.PNG" width="70%" alt="WORKSHOP NAME logo" style="display:block; margin-left:auto; margin-right:auto; ">
+ <img src="img/missingLogo.png" width="70%" alt="{{Workshop Name}} logo" style="display:block; margin-left:auto; margin-right:auto; ">
  </a>
 <br>
 
@@ -132,7 +154,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">NAME OF WORKSHOP YEAR</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">{{Workshop Name}} {{Year}}</a>
           </h1>
         </div>
 
@@ -141,13 +163,13 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">NAME OF WORKSHOP YEAR</h1>
-<p class="author"><em>Faculty: INSTRUCTOR AND TA NAMES</em></p>
-<p class="date"><em>DATES</em></p>
+<h1 class="title">{{Workshop Name}} {{Year}}</h1>
+<p class="author"><em>Faculty: {{Faculty Names Separated By Commas}}</em></p>
+<p class="date"><em>{{Dates}}</em></p>
 </div>
 <div id="workshop-info" class="section level1 hasAnchor">
 <h1>Workshop Info<a href="index.html#workshop-info" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Welcome to the YEAR WORKSHOP Canadian Bioinformatics Workshop webpage!</p>
+<p>Welcome to the {{Year}} {{Workshop Name}} Canadian Bioinformatics Workshop webpage!</p>
 <!--## Class Photo
 
 After workshop concludes, YOUR EMBED CODE HERE-->
@@ -155,252 +177,237 @@ After workshop concludes, YOUR EMBED CODE HERE-->
 <h2>Schedule<a href="index.html#schedule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <!--Copy paste a table into https://www.tablesgenerator.com/markdown_tables (select convert to markdown) to create a table in markdown.   
 -->
-<script>window.scheduleData = [{"day_label":"July 2","date":"2025-07-02","activity":"Arrivals & Check-in","type":"other","time_1":"09:30","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"Welcome (Nia Hughes)","type":"other","time_1":"10:00","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"Module 1 - Intro to RNAseq course/concepts (lecture) (Malachi Griffith)","type":"activity","time_1":"10:30","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"Break (30min)","type":"break","time_1":"11:30","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"AWS Login and Setup","type":"activity","time_1":"12:00","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"Module 1 - RNAseq inputs and QC (practical)","type":"activity","time_1":"12:30","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"Lunch (1h)","type":"break","time_1":"13:30","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"Module 1 - RNAseq inputs and QC (practical cont'd)","type":"activity","time_1":"14:30","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"Break (30min)","type":"break","time_1":"16:30","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"Module 2 - RNA alignment concepts and file formats (lecture) (Obi Griffith)","type":"activity","time_1":"17:00","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"(Optional) Team Assignment","type":"activity","time_1":"18:30","timezone_1_label":"Time (ET)"},{"day_label":"July 2","date":"2025-07-02","activity":"End of Day 1","type":"other","time_1":"19:00","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"Arrivals","type":"other","time_1":"09:30","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"Module 2 - RNA alignment (practical)","type":"activity","time_1":"10:00","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"Break (30min)","type":"break","time_1":"12:00","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"Module 2 - RNA alignment (practical cont'd)","type":"activity","time_1":"12:30","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"Lunch (1h)","type":"break","time_1":"13:30","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"Module 3 - RNA Expression and Differential Expression (Lecture) (Obi Griffith)","type":"activity","time_1":"14:30","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"Break (30min)","type":"break","time_1":"15:30","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"Module 3 - RNA Expression and Differential Expression (Practical)","type":"activity","time_1":"16:00","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"(Optional) Team Assignment","type":"activity","time_1":"18:30","timezone_1_label":"Time (ET)"},{"day_label":"July 3","date":"2025-07-03","activity":"End of Day 2","type":"other","time_1":"19:30","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"Arrivals","type":"other","time_1":"09:30","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"Module 3 - RNA Expression and Differential Expression (Practical cont'd)","type":"activity","time_1":"10:00","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"Break (30min)","type":"break","time_1":"12:00","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"Module 4 - Advanced Topics (Lecture) (Malachi Griffith)","type":"activity","time_1":"12:30","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"Lunch + Class Photo (1h)","type":"break","time_1":"13:30","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"Module 4 - Pathway Analysis (Practical)","type":"activity","time_1":"14:30","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"Break (30min)","type":"break","time_1":"16:30","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"Module 4 - Batch Correction (Practical)","type":"activity","time_1":"17:00","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"Survey & Closing Remarks","type":"activity","time_1":"18:00","timezone_1_label":"Time (ET)"},{"day_label":"July 4","date":"2025-07-04","activity":"End of Day 3","type":"other","time_1":"18:30","timezone_1_label":"Time (ET)"}];</script>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Workshop Schedule</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- Final CSS Reset for Bookdown --- */
-        #schedule-container, #schedule-container * {
-            all: revert; /* Revert all inherited styles to browser defaults */
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+<style>
+    :root {
+      --schedule-primary-color: #4A6BFF;
+      --schedule-border-color: #EAECEF;
+      --schedule-text-color: #555;
+    }
+    .schedule-card {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border: 1px solid var(--schedule-border-color);
+      border-radius: 12px;
+      margin: 2em 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    .schedule-tabs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--schedule-border-color);
+      background-color: #fff;
+    }
+    .schedule-tabs-wrapper {
+      position: relative;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+    .schedule-tabs-wrapper::before,
+    .schedule-tabs-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50px;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      opacity: 0;
+    }
+    .schedule-tabs-wrapper::before {
+      left: 0;
+      background: linear-gradient(to left, rgba(255,255,255,0), #fff 70%);
+    }
+    .schedule-tabs-wrapper::after {
+      right: 0;
+      background: linear-gradient(to right, rgba(255,255,255,0), #fff 70%);
+    }
+    .schedule-tabs-wrapper.scrolled-left::before { opacity: 1; }
+    .schedule-tabs-wrapper.scrolled-right::after { opacity: 1; }
+    
+    .schedule-tab-buttons {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .schedule-tab-buttons::-webkit-scrollbar { display: none; }
+    
+    .timezone-selector-container {
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+      padding: 0 20px;
+    }
+    .timezone-selector-container label {
+      font-size: 0.9em;
+      color: var(--schedule-text-color);
+      font-weight: 500;
+    }
+    .schedule-tabs select {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+    .schedule-tab {
+      padding: 14px 20px;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -1px;
+      color: var(--schedule-text-color);
+      font-weight: 500;
+    }
+    .schedule-tab.active {
+      color: var(--schedule-primary-color);
+      border-bottom-color: var(--schedule-primary-color);
+    }
+    .schedule-panel { display: none; }
+    .schedule-panel.active { display: block; }
+    .schedule-table { width: 100%; border-collapse: collapse; }
+    .schedule-table th, .schedule-table td {
+      text-align: left;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--schedule-border-color);
+    }
+    .schedule-table th {
+      color: #888;
+      font-size: 0.8em;
+      font-weight: 600;
+      text-transform: uppercase;
+      background-color: #F8F9FA;
+    }
+    .schedule-table tr:last-child td { border-bottom: none; }
+  </style>
+<div class="schedule-card">
+<div class="schedule-tabs" id="schedule-tabs-container"></div>
+<div class="schedule-content" id="schedule-panels-container"></div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const scheduleData = [{"day_label":"Day 1","date":"July 7, 2025","activity":"Arrivals & Check-in","type":"NA","time_1":"7:30","timezone_1_label":"MOUNTAIN","time_2":"9:30","timezone_2_label":"EASTERN"},{"day_label":"Day 1","date":"July 7, 2025","activity":"Welcome","type":"Intro","time_1":"8:00","timezone_1_label":"MOUNTAIN","time_2":"10:00","timezone_2_label":"EASTERN"},{"day_label":"Day 2","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 3","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 4","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 5","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 6","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 7","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"}];
+      const tabsContainer = document.getElementById("schedule-tabs-container");
+      const panelsContainer = document.getElementById("schedule-panels-container");
 
-        #schedule-container h1 {
-            font-size: 30px;
-            font-weight: 700;
-        }
-        #schedule-container p {
-            font-size: 16px;
-            color: #6b7280;
-        }
-        #schedule-container button[role="tab"] {
-            font-size: 16px;
-            padding: 10px 18px !important;
-            border-radius: 6px 6px 0 0;
-            border: 1px solid transparent;
-            border-bottom: none;
-            cursor: pointer;
-            transition: background-color 0.2s, color 0.2s;
-        }
-        #schedule-container button[role="tab"][aria-selected="true"] {
-            background-color: #4f46e5;
-            color: white;
-            border-color: #4f46e5;
-        }
-        #schedule-container button[role="tab"][aria-selected="false"]:hover {
-            background-color: #eef2ff;
-        }
-        #schedule-container button[role="tab"]:focus-visible {
-            outline: 2px solid #4338ca;
-            outline-offset: 2px;
-            z-index: 10;
-        }
-        #schedule-container div[role="tabpanel"] { display: none; }
-        #schedule-container div[role="tabpanel"]:not([hidden]) { display: block; }
+      if (scheduleData.length === 0) return;
 
-        #schedule-container table {
-            width: 100%;
-            border-collapse: collapse;
-            border-spacing: 0;
-            margin: 0;
-            table-layout: fixed;
+      const timezones = [];
+      const firstRow = scheduleData[0];
+      for (const key in firstRow) {
+        if (key.match(/timezone_\d+_label/)) {
+          const index = key.match(/\d+/)[0];
+          timezones.push({ index: index, label: firstRow[key] });
         }
-        #schedule-container table th,
-        #schedule-container table td {
-            padding: 10px 18px !important; /* Reduced cell padding */
-            text-align: left;
-            vertical-align: middle;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        #schedule-container table th {
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #374151; /* Darker text */
-            background-color: #e5e7eb; /* Darker background */
-            white-space: nowrap;
-        }
-        #schedule-container table td {
-            font-size: 15px;
-            word-wrap: break-word;
-        }
-        #schedule-container table tbody tr.schedule-item-shaded {
-            background-color: #f9fafb;
-        }
-        #schedule-container .time-cell {
-            font-weight: 500;
-            color: #111827;
-            white-space: nowrap;
-        }
-        #schedule-container .activity-cell {
-            color: #374151;
-        }
-    </style>
-</head>
-<body>
-    <div id="schedule-container" class="bg-white rounded-xl shadow-lg overflow-hidden my-8">
-        <div class="p-8">
-            <h1 id="schedule-title">Workshop Schedule</h1>
-            <p class="mt-2 mb-8">Select a day to view the schedule.</p>
+      }
+      const days = [...new Set(scheduleData.map(row => row.day_label))];
+      
+      const tabsWrapper = document.createElement("div");
+      tabsWrapper.className = "schedule-tabs-wrapper";
+      const tabButtonsContainer = document.createElement("div");
+      tabButtonsContainer.className = "schedule-tab-buttons";
+      tabsWrapper.appendChild(tabButtonsContainer);
+      tabsContainer.appendChild(tabsWrapper);
 
-            <div role="tablist" aria-label="Workshop Schedule" id="tab-list" class="border-b border-gray-200 mb-6 flex flex-wrap -mb-px"></div>
-            <div id="tab-panels"></div>
+      days.forEach((day, dayIndex) => {
+        const tab = document.createElement("div");
+        tab.className = "schedule-tab";
+        tab.dataset.target = `panel-${dayIndex}`;
+        tab.textContent = day;
+        tabButtonsContainer.appendChild(tab);
+      });
 
-            <div id="loading-message" class="text-center py-8 text-gray-500">Initializing schedule...</div>
-        </div>
-    </div>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            if (typeof window.scheduleData !== 'undefined') {
-                initializeSchedule(window.scheduleData);
-            } else {
-                const loadingMessage = document.getElementById('loading-message');
-                loadingMessage.textContent = "Error: Schedule data was not provided.";
-                console.error("window.scheduleData is not defined. Ensure the R code chunk ran correctly.");
-            }
+      if (timezones.length > 1) {
+        const selectorContainer = document.createElement("div");
+        selectorContainer.className = "timezone-selector-container";
+        let selectorHtml = `<label for="tz-selector">Timezone</label>
+                            <select id="tz-selector">`;
+        timezones.forEach(tz => {
+          selectorHtml += `<option value="${tz.index}">${tz.label}</option>`;
         });
+        selectorHtml += `</select>`;
+        selectorContainer.innerHTML = selectorHtml;
+        tabsContainer.appendChild(selectorContainer);
+      }
+      
+      const tzSelector = document.getElementById("tz-selector");
 
-        function initializeSchedule(scheduleData) {
-            const tabList = document.getElementById('tab-list');
-            const tabPanels = document.getElementById('tab-panels');
-            const loadingMessage = document.getElementById('loading-message');
-            loadingMessage.style.display = 'none';
+      days.forEach((day, dayIndex) => {
+        panelsContainer.innerHTML += `<div class="schedule-panel" id="panel-${dayIndex}"></div>`;
+      });
+      
+      const tabs = document.querySelectorAll(".schedule-tab");
+      const panels = document.querySelectorAll(".schedule-panel");
 
-            const headers = Object.keys(scheduleData[0] || {});
+      function renderTables() {
+        const selectedTzIndex = tzSelector ? tzSelector.value : timezones[0].index;
+        const timeCol = `time_${selectedTzIndex}`;
+        let selectedTzLabel = tzSelector ? tzSelector.options[tzSelector.selectedIndex].text : timezones[0].label;
+        
+        panels.forEach((panel, dayIndex) => {
+          const day = days[dayIndex];
+          const dayEvents = scheduleData.filter(row => row.day_label === day);
+          let tableHtml = `<table class="schedule-table"><thead><tr>
+                           <th style="width:25%;">Time (${selectedTzLabel})</th>
+                           <th>Activity</th>
+                           </tr></thead><tbody>`;
+          dayEvents.forEach(row => {
+            tableHtml += `<tr><td>${row[timeCol] || ""}</td><td>${row.activity || ""}</td></tr>`;
+          });
+          tableHtml += `</tbody></table>`;
+          panel.innerHTML = tableHtml;
+        });
+      }
 
-            const days = scheduleData.reduce((acc, row) => {
-                const day = row.day_label.trim();
-                if (!acc[day]) acc[day] = { date: row.date, items: [] };
-                acc[day].items.push(row);
-                return acc;
-            }, {});
+      function switchTab(targetId) {
+        tabs.forEach(tab => tab.classList.remove("active"));
+        panels.forEach(panel => panel.classList.remove("active"));
+        const activeTab = document.querySelector(`[data-target='${targetId}']`);
+        const activePanel = document.getElementById(targetId);
+        if (activeTab) activeTab.classList.add("active");
+        if (activePanel) activePanel.classList.add("active");
+      }
+      
+      // --- CHANGE: Rewritten function for more robust indicator logic ---
+      function updateScrollIndicators() {
+        const el = tabButtonsContainer;
+        // Use rounded values to avoid floating point inaccuracies
+        const scrollLeft = Math.round(el.scrollLeft);
+        const scrollWidth = Math.round(el.scrollWidth);
+        const clientWidth = Math.round(el.clientWidth);
+        
+        const hasOverflow = scrollWidth > clientWidth;
+        
+        // Show left indicator if scrolled away from the start
+        tabsWrapper.classList.toggle("scrolled-left", hasOverflow && scrollLeft > 0);
+        
+        // Show right indicator if there is overflow and we are not at the very end
+        const isAtEnd = scrollLeft >= scrollWidth - clientWidth;
+        tabsWrapper.classList.toggle("scrolled-right", hasOverflow && !isAtEnd);
+      }
 
-            buildTabs(days, headers, scheduleData);
-
-            function buildTabs(days, headers, allData) {
-                const dayLabels = Object.keys(days);
-                if (dayLabels.length === 0) {
-                    loadingMessage.style.display = 'block';
-                    loadingMessage.textContent = "No schedule data found.";
-                    return;
-                }
-
-                // Dynamically find time zones
-                const timeZoneColumns = headers.filter(h => h.startsWith('time_'));
-
-                const today = new Date();
-                const todayString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-                let activeTabIndex = dayLabels.findIndex(label => days[label].date === todayString);
-                if (activeTabIndex === -1) activeTabIndex = 0;
-
-                dayLabels.forEach((label, index) => {
-                    const dayInfo = days[label];
-                    const isActive = index === activeTabIndex;
-
-                    const tabId = `tab-${index}`;
-                    const panelId = `panel-${index}`;
-                    const button = document.createElement('button');
-                    button.id = tabId;
-                    button.role = 'tab';
-                    button.setAttribute('aria-controls', panelId);
-                    button.setAttribute('aria-selected', isActive);
-                    button.tabIndex = isActive ? 0 : -1;
-                    button.className = "text-gray-600";
-                    button.textContent = label;
-                    tabList.appendChild(button);
-
-                    const panel = document.createElement('div');
-                    panel.id = panelId;
-                    panel.role = 'tabpanel';
-                    panel.tabIndex = 0;
-                    panel.setAttribute('aria-labelledby', tabId);
-                    if (!isActive) panel.hidden = true;
-
-                    let tableHeaderHtml = '';
-                    // Adjusted widths for narrower time columns
-                    const timeHeaderWidths = { 1: 20, 2: 15, 3: 12, 4: 12 };
-                    const numTimeZones = timeZoneColumns.length;
-                    const timeColWidth = timeHeaderWidths[numTimeZones] || 12;
-                    const activityColWidth = 100 - (numTimeZones * timeColWidth);
-
-                    timeZoneColumns.forEach(timeCol => {
-                        const tzIndex = timeCol.split('_')[1];
-                        const labelCol = `timezone_${tzIndex}_label`;
-                        const headerLabel = allData[0][labelCol] || `Time ${tzIndex}`;
-                        tableHeaderHtml += `<th style="width: ${timeColWidth}%;">${headerLabel}</th>`;
-                    });
-
-                    if (numTimeZones > 0) {
-                        tableHeaderHtml += `<th style="width: ${activityColWidth}%;">Activity</th>`;
-                    } else {
-                        panel.innerHTML = `<p style="padding: 16px; color: #dc2626;">Error: No 'time' or 'time_X' columns found in CSV.</p>`;
-                        tabPanels.appendChild(panel);
-                        return;
-                    }
-
-                    let tableRowsHtml = '';
-                    dayInfo.items.forEach(item => {
-                        const isShaded = item.type && item.type.toLowerCase() !== 'activity';
-                        let timeCells = '';
-                        timeZoneColumns.forEach(timeCol => {
-                            timeCells += `<td class="time-cell">${item[timeCol] || ''}</td>`;
-                        });
-                        tableRowsHtml += `<tr class="${isShaded ? 'schedule-item-shaded' : ''}">${timeCells}<td class="activity-cell">${item.activity || ''}</td></tr>`;
-                    });
-
-                    panel.innerHTML = `<div class="overflow-x-auto"><table><thead><tr>${tableHeaderHtml}</tr></thead><tbody>${tableRowsHtml}</tbody></table></div>`;
-                    tabPanels.appendChild(panel);
-                });
-
-                setupEventListeners();
-            }
-
-            function setupEventListeners() {
-                const tabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
-                function activateTab(tab) {
-                    tabs.forEach(t => {
-                        t.setAttribute('aria-selected', 'false');
-                        t.setAttribute('tabindex', '-1');
-                        const panel = document.getElementById(t.getAttribute('aria-controls'));
-                        if (panel) panel.hidden = true;
-                    });
-                    tab.setAttribute('aria-selected', 'true');
-                    tab.setAttribute('tabindex', '0');
-                    const panel = document.getElementById(tab.getAttribute('aria-controls'));
-                    if (panel) panel.hidden = false;
-                }
-                tabList.addEventListener('click', (e) => {
-                    const clickedTab = e.target.closest('[role="tab"]');
-                    if (clickedTab) activateTab(clickedTab);
-                });
-                tabList.addEventListener('keydown', (e) => {
-                    const currentTab = e.target.closest('[role="tab"]');
-                    if (!currentTab) return;
-                    let index = tabs.indexOf(currentTab);
-                    if (e.key === 'ArrowRight') index = (index + 1) % tabs.length;
-                    else if (e.key === 'ArrowLeft') index = (index - 1 + tabs.length) % tabs.length;
-                    else if (e.key === 'Home') index = 0;
-                    else if (e.key === 'End') index = tabs.length - 1;
-                    else return;
-
-                    e.preventDefault();
-                    tabs[index].focus();
-                    activateTab(tabs[index]);
-                });
-            }
+      tabButtonsContainer.addEventListener("click", e => {
+        if (e.target.classList.contains("schedule-tab")) {
+          switchTab(e.target.dataset.target);
         }
-    </script>
-</body>
-</html>
+      });
+
+      if (tzSelector) {
+        tzSelector.addEventListener("change", renderTables);
+      }
+      
+      tabButtonsContainer.addEventListener("scroll", updateScrollIndicators, { passive: true });
+      window.addEventListener("resize", updateScrollIndicators);
+
+      renderTables();
+      if (tabs.length > 0) {
+        switchTab(tabs[0].dataset.target);
+      }
+      
+      // A brief delay before the initial check can help ensure the browser has finalized layout
+      setTimeout(updateScrollIndicators, 100);
+    });
+  </script>
 </div>
 <div id="pre-work" class="section level2 hasAnchor">
 <h2>Pre-work<a href="index.html#pre-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -446,7 +453,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/cbw-dev/bookdown-template/blob/main/index.Rmd",
+    "link": "https://github.com/bioinformaticsdotca/{{Code}}/blob/main/index.Rmd",
     "text": "Edit"
   },
   "history": {
