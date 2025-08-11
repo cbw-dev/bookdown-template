@@ -1,9 +1,4 @@
-## CBW WORKSHOP YEAR
+## CBW {{WORKSHOP_NAME}} {{YEAR}
 
-[Workshop Website](YOUR WORKSHOP URL HERE)
+[Workshop Website]({{URL}})
 
-CITY, PROVINCE(S)  
-Instructors: INSTRUCTOR NAMES  
-TAs: TA NAMES
-
-OUTLINE HERE
