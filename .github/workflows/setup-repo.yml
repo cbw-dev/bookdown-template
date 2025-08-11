@@ -1,6 +1,5 @@
 name: Setup Workshop from Config
 
-# --- CHANGE: Trigger when the config file is pushed ---
 on:
   push:
     paths:
@@ -8,7 +7,7 @@ on:
 
 jobs:
   replace-variables:
-    if: github.repository != 'cbw-dev/bookdown-template'
+    if: github.repository != 'YOUR_ORG/YOUR_TEMPLATE_REPO_NAME'
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -17,11 +16,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # --- CHANGE: Read variables from the JSON file ---
       - name: Load Variables from Config
-        id: vars
         run: |
-          # This uses the 'jq' tool to parse JSON and set outputs for the job
           echo "WORKSHOP_CODE=$(jq -r .workshop_code workshop_config.json)" >> $GITHUB_ENV
           echo "WORKSHOP_NAME=$(jq -r .workshop_name workshop_config.json)" >> $GITHUB_ENV
           echo "YEAR=$(jq -r .year workshop_config.json)" >> $GITHUB_ENV
@@ -29,10 +25,14 @@ jobs:
           echo "DATES=$(jq -r .dates workshop_config.json)" >> $GITHUB_ENV
           echo "FACULTY=$(jq -r .faculty workshop_config.json)" >> $GITHUB_ENV
 
+      # --- CHANGE: Added an 'if' condition to the following steps ---
       - name: Rename .Rproj file
-        run: mv template.Rproj ${{ env.WORKSHOP_CODE }}.Rproj
+        if: env.WORKSHOP_CODE != 'ENTER_WORKSHOP_CODE_HERE'
+        # Added quotes for safety
+        run: mv template.Rproj "${{ env.WORKSHOP_CODE }}.Rproj"
 
       - name: Replace All Placeholders
+        if: env.WORKSHOP_CODE != 'Workshop Code (e.g. INR_Mon2510)'
         run: |
           find . -type f -not -path './.git/*' -not -path './.github/*' -exec sed -i \
             -e "s|{{WORKSHOP_CODE}}|${WORKSHOP_CODE}|g" \
@@ -42,20 +42,20 @@ jobs:
             -e "s|{{DATES}}|${DATES}|g" \
             -e "s|{{FACULTY}}|${FACULTY}|g" \
             {} +
-
+            
       - name: Clean up config file
+        if: env.WORKSHOP_CODE != 'ENTER_WORKSHOP_CODE_HERE'
         run: rm workshop_config.json
-
+        
       - name: Commit and Push Changes
+        if: env.WORKSHOP_CODE != 'ENTER_WORKSHOP_CODE_HERE'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          # Add all changes, including the deletion of the config file
           git add .
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            # Amend the initial commit so the history is clean
             git commit --amend -m "feat: setup workshop with custom variables"
             git push --force
           fi
