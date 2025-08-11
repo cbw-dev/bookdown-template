@@ -5,12 +5,12 @@ date: "{{DATES}}"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-url: https://bioinformaticsdotca.github.io/{{WORKSHOP_CODE}}/ # CHANGE THIS LINK TO YOUR LANDING PAGE LINK
+url: https://bioinformaticsdotca.github.io/{{WORKSHOP_CODE}}/ 
 cover-image: img/bioinformatics_logo.png
 description: |
   Workshop website for the {{YEAR}} {{WORKSHOP_NAME}} Canadian Bioinformatics Workshop
 link-citations: yes
-github-repo: bioinformaticsdotca/{{WORKSHOP_CODE}} # CHANGE THIS TO YOUR OWN REPO
+github-repo: bioinformaticsdotca/{{WORKSHOP_CODE}}
 favicon: img/favicon.ico
 ---
 
@@ -25,10 +25,6 @@ Welcome to the {{YEAR}} {{WORKSHOP_NAME}} Canadian Bioinformatics Workshop webpa
 After workshop concludes, YOUR EMBED CODE HERE-->
 
 ## Schedule
-
-<!--Copy paste a table into https://www.tablesgenerator.com/markdown_tables (select convert to markdown) to create a table in markdown.   
--->
-
 
 ```{r schedule-loader, echo=FALSE, message=FALSE, warning=FALSE}
 # --- Self-Contained R-Markdown Schedule Component ---
