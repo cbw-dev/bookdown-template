@@ -1,4 +1,4 @@
 ## CBW {{WORKSHOP_NAME}} {{YEAR}}
 
-[Workshop Website](bioinformaticsdotca.github.io/{{WORKSHOP_CODE}})
+[Workshop Website](http://bioinformaticsdotca.github.io/{{WORKSHOP_CODE}})
 
