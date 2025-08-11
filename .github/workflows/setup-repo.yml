@@ -1,58 +1,40 @@
-name: Setup New Workshop Repo
+name: Setup Workshop from Config
 
-# This action is triggered manually from the Actions tab
+# --- CHANGE: Trigger when the config file is pushed ---
 on:
-  workflow_dispatch:
-    # These are the form fields that will appear on GitHub
-    inputs:
-      workshop_code:
-        description: 'The short code for the repo (e.g., INR_Mon-2510)'
-        required: true
-      workshop_name:
-        description: 'The full, human-readable workshop name (e.g. Introduction to R)'
-        required: true
-      year:
-        description: 'The year of the workshop'
-        required: true
-      url:
-        description: 'The URL of the workshop page on bioinformatics.ca'
-        required: true
-      dates:
-        description: 'The date range of the workshop (e.g. August 11-13, 2025)'
-        required: true
-      faculty:
-        description: 'Faculty names, separated by commas'
-        required: true
-
+  push:
+    paths:
+      - 'workshop_config.json'
 
 jobs:
   replace-variables:
+    if: github.repository != 'cbw-dev/bookdown-template'
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
-    # Make the inputs available as environment variables for the whole job
-    env:
-      WORKSHOP_CODE: ${{ github.event.inputs.workshop_code }}
-      WORKSHOP_NAME: ${{ github.event.inputs.workshop_name }}
-      YEAR: ${{ github.event.inputs.year }}
-      URL: ${{ github.event.inputs.url }}
-      DATES: ${{ github.event.inputs.dates }}
-      FACULTY: ${{ github.event.inputs.faculty }}
-
     steps:
-      # Step 1: Check out the code from the repository
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Step 2: Rename the .Rproj file using the workshop_code input
+      # --- CHANGE: Read variables from the JSON file ---
+      - name: Load Variables from Config
+        id: vars
+        run: |
+          # This uses the 'jq' tool to parse JSON and set outputs for the job
+          echo "WORKSHOP_CODE=$(jq -r .workshop_code workshop_config.json)" >> $GITHUB_ENV
+          echo "WORKSHOP_NAME=$(jq -r .workshop_name workshop_config.json)" >> $GITHUB_ENV
+          echo "YEAR=$(jq -r .year workshop_config.json)" >> $GITHUB_ENV
+          echo "URL=$(jq -r .url workshop_config.json)" >> $GITHUB_ENV
+          echo "DATES=$(jq -r .dates workshop_config.json)" >> $GITHUB_ENV
+          echo "FACULTY=$(jq -r .faculty workshop_config.json)" >> $GITHUB_ENV
+
       - name: Rename .Rproj file
         run: mv template.Rproj ${{ env.WORKSHOP_CODE }}.Rproj
 
-      # Step 3: Find and replace all placeholders in all files
       - name: Replace All Placeholders
         run: |
-          # This command finds all files (excluding .git folder) and runs a replacement for each variable.
-          # We use the pipe "|" as a separator to safely handle URLs and other special characters.
-          find . -type f -not -path './.git/*' -exec sed -i \
+          find . -type f -not -path './.git/*' -not -path './.github/*' -exec sed -i \
             -e "s|{{WORKSHOP_CODE}}|${WORKSHOP_CODE}|g" \
             -e "s|{{WORKSHOP_NAME}}|${WORKSHOP_NAME}|g" \
             -e "s|{{YEAR}}|${YEAR}|g" \
@@ -61,15 +43,19 @@ jobs:
             -e "s|{{FACULTY}}|${FACULTY}|g" \
             {} +
 
-      # Step 4: Commit the changes back to the repository
+      - name: Clean up config file
+        run: rm workshop_config.json
+
       - name: Commit and Push Changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          # Add all changes, including the deletion of the config file
           git add .
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "feat: setup workshop with custom variables"
-            git push
+            # Amend the initial commit so the history is clean
+            git commit --amend -m "feat: setup workshop with custom variables"
+            git push --force
           fi
