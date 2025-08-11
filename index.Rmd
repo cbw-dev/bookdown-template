@@ -1,16 +1,16 @@
 --- 
-title: "{{Workshop Name}} {{Year}}"
-author: "Faculty: {{Faculty Names Separated By Commas}}"
-date: "{{Dates}}"
+title: "{{WORKSHOP_NAME}} {{YEAR}}"
+author: "Faculty: {{FACULTY}}"
+date: "{{DATES}}"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-url: https://bioinformaticsdotca.github.io/{{Code}}/ # CHANGE THIS LINK TO YOUR LANDING PAGE LINK
+url: https://bioinformaticsdotca.github.io/{{CODE}}/ # CHANGE THIS LINK TO YOUR LANDING PAGE LINK
 cover-image: img/bioinformatics_logo.png
 description: |
-  Workshop website for the {{Year}} {{Workshop Name}} Canadian Bioinformatics Workshop
+  Workshop website for the {{YEAR}} {{WORKSHOP_NAME}} Canadian Bioinformatics Workshop
 link-citations: yes
-github-repo: bioinformaticsdotca/{{Code}} # CHANGE THIS TO YOUR OWN REPO
+github-repo: bioinformaticsdotca/{{CODE}} # CHANGE THIS TO YOUR OWN REPO
 favicon: img/favicon.ico
 ---
 
@@ -18,7 +18,7 @@ favicon: img/favicon.ico
 
 # Workshop Info
 
-Welcome to the {{Year}} {{Workshop Name}} Canadian Bioinformatics Workshop webpage!  
+Welcome to the {{YEAR}} {{WORKSHOP_NAME}} Canadian Bioinformatics Workshop webpage!  
 
 <!--## Class Photo
 

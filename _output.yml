@@ -13,9 +13,9 @@ bookdown::gitbook:
         <a href="https://bioinformaticsdotca.github.io/">
          <img src="img/bioinformatics_logo.png" width="90%" alt="bioinformatics.ca logo" style="display:block; margin-left:auto; margin-right:auto; margin-top:15px;">
          </a>
-        <li><center><strong><a href="./"><br>{{Workshop Name}}<br><br></a></strong></center></li>
+        <li><center><strong><a href="./"><br>{{WORKSHOP_NAME}}<br><br></a></strong></center></li>
         <a href="./">
-         <img src="img/missingLogo.png" width="70%" alt="{{Workshop Name}} logo" style="display:block; margin-left:auto; margin-right:auto; ">
+         <img src="img/missingLogo.png" width="70%" alt="{{WORKSHOP_NAME}} logo" style="display:block; margin-left:auto; margin-right:auto; ">
          </a>
         <br>
 
@@ -30,7 +30,7 @@ bookdown::gitbook:
         <a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width=25% style="display:inline-block;" style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo.">
         <a href="https://www.hpcforhealth.ca/"><img src="img/sponsors/hpc4health.png" width=60% style="display:inline-block;" style="padding-bottom: 20px "alt="HPC4Health logo.">
 
-    edit: https://github.com/bioinformaticsdotca/{{Code}}/blob/main/%s
+    edit: https://github.com/bioinformaticsdotca/{{CODE}}/blob/main/%s
 
     download: ["pdf", "epub"]
   number_sections: false
@@ -42,9 +42,9 @@ bookdown::pdf_book:
   keep_tex: yes
 bookdown::epub_book: default
 bookdown::html_document2:
-  css: style.css                         # <<< ADDED/ENSURED css line
+  css: style.css
   pandoc_args:
     - "--lua-filter=callouts.lua"
-  includes:                             # <<< ADDED/ENSURED THIS SECTION
-    in_header:                           # <<<
-      - fa-header.html                   # <<<
+  includes:
+    in_header:
+      - fa-header.html
