@@ -30,7 +30,7 @@ bookdown::gitbook:
         <a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width=25% style="display:inline-block;" style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo.">
         <a href="https://www.hpcforhealth.ca/"><img src="img/sponsors/hpc4health.png" width=60% style="display:inline-block;" style="padding-bottom: 20px "alt="HPC4Health logo.">
 
-    edit: https://github.com/bioinformaticsdotca/{{CODE}}/blob/main/%s
+    edit: https://github.com/bioinformaticsdotca/{{WORKSHOP_CODE}}/blob/main/%s
 
     download: ["pdf", "epub"]
   number_sections: false

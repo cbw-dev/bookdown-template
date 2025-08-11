@@ -5,12 +5,12 @@ date: "{{DATES}}"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-url: https://bioinformaticsdotca.github.io/{{CODE}}/ # CHANGE THIS LINK TO YOUR LANDING PAGE LINK
+url: https://bioinformaticsdotca.github.io/{{WORKSHOP_CODE}}/ # CHANGE THIS LINK TO YOUR LANDING PAGE LINK
 cover-image: img/bioinformatics_logo.png
 description: |
   Workshop website for the {{YEAR}} {{WORKSHOP_NAME}} Canadian Bioinformatics Workshop
 link-citations: yes
-github-repo: bioinformaticsdotca/{{CODE}} # CHANGE THIS TO YOUR OWN REPO
+github-repo: bioinformaticsdotca/{{WORKSHOP_CODE}} # CHANGE THIS TO YOUR OWN REPO
 favicon: img/favicon.ico
 ---
 
