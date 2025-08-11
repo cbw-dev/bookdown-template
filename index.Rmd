@@ -31,7 +31,8 @@ After workshop concludes, YOUR EMBED CODE HERE-->
 
 
 ```{r schedule-loader, echo=FALSE, message=FALSE, warning=FALSE}
-# --- Self-Contained R-Markdown Schedule Component (v16 - Final Bug Fix) ---
+# --- Self-Contained R-Markdown Schedule Component ---
+# To format your schedule csv, go here: https://cbw-dev.github.io/smart-scheduler/
 
 # 1. Load necessary libraries
 library(readr)
