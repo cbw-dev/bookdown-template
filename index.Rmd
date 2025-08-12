@@ -20,9 +20,13 @@ favicon: img/favicon.ico
 
 Welcome to the {{YEAR}} {{WORKSHOP_NAME}} Canadian Bioinformatics Workshop webpage!  
 
-<!--## Class Photo
+## Pre-work
 
-After workshop concludes, YOUR EMBED CODE HERE-->
+<!--[You can find your pre-work here.](LINK TO PREWORK)-->
+
+## Class Photo
+
+Coming soon! 
 
 ## Schedule
 
@@ -296,8 +300,3 @@ schedule_component <- tagList(
 # 7. Output the final component
 schedule_component
 ```
-
-## Pre-work
-
-<!--[You can find your pre-work here.](LINK TO PREWORK)
--->

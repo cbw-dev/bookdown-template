@@ -108,8 +108,9 @@
 <li class="part"><span><b>I Introduction</b></span></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Workshop Info</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-work"><i class="fa fa-check"></i>Pre-work</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#class-photo"><i class="fa fa-check"></i>Class Photo</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#schedule"><i class="fa fa-check"></i>Schedule</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="meet-your-faculty.html"><a href="meet-your-faculty.html"><i class="fa fa-check"></i>Meet Your Faculty</a></li>
 <li class="chapter" data-level="" data-path="data-and-compute-setup.html"><a href="data-and-compute-setup.html"><i class="fa fa-check"></i>Data and Compute Setup</a></li>
@@ -169,9 +170,14 @@
 <div id="workshop-info" class="section level1 hasAnchor">
 <h1>Workshop Info<a href="index.html#workshop-info" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Welcome to the {{YEAR}} {{WORKSHOP_NAME}} Canadian Bioinformatics Workshop webpage!</p>
-<!--## Class Photo
-
-After workshop concludes, YOUR EMBED CODE HERE-->
+<div id="pre-work" class="section level2 hasAnchor">
+<h2>Pre-work<a href="index.html#pre-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<!--[You can find your pre-work here.](LINK TO PREWORK)-->
+</div>
+<div id="class-photo" class="section level2 hasAnchor">
+<h2>Class Photo<a href="index.html#class-photo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Coming soon!</p>
+</div>
 <div id="schedule" class="section level2 hasAnchor">
 <h2>Schedule<a href="index.html#schedule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <style>
@@ -405,11 +411,6 @@ After workshop concludes, YOUR EMBED CODE HERE-->
       setTimeout(updateScrollIndicators, 100);
     });
   </script>
-</div>
-<div id="pre-work" class="section level2 hasAnchor">
-<h2>Pre-work<a href="index.html#pre-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<!--[You can find your pre-work here.](LINK TO PREWORK)
--->
 
 </div>
 </div>
@@ -435,8 +436,8 @@ gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
   "sharing": {
     "github": false,
-    "facebook": true,
-    "twitter": true,
+    "facebook": false,
+    "twitter": false,
     "linkedin": false,
     "weibo": false,
     "instapaper": false,

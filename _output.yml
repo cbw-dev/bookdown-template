@@ -7,6 +7,9 @@ bookdown::gitbook:
       - fa-header.html
       - _bioschemas.html
   config:
+    sharing:
+      facebook: no
+      twitter: no
     toc: # Table of Contents
       collapse: subsection
       before: |
@@ -28,6 +31,8 @@ bookdown::gitbook:
         <a href="https://www.ontariogenomics.ca/"><img src="img/sponsors/ontariogenomics.png" height="55" style="display:inline-block;" style="padding-bottom: 20px;" alt="Ontario Genomics logo.">
         <br><br>
         <a href="https://oicr.on.ca/"><img src="img/sponsors/oicr.png" width=35% style="display:inline-block;" style="padding-bottom: 20px" alt="Ontario Institute for Cancer Research logo.">
+
+
     edit: https://github.com/bioinformaticsdotca/{{WORKSHOP_CODE}}/blob/main/%s
 
     download: ["pdf", "epub"]
