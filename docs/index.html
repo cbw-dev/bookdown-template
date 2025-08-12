@@ -234,6 +234,7 @@
       white-space: nowrap;
       -ms-overflow-style: none;
       scrollbar-width: none;
+      scroll-behavior: smooth;
     }
     .schedule-tab-buttons::-webkit-scrollbar { display: none; }
     
@@ -282,6 +283,22 @@
       background-color: #F8F9FA;
     }
     .schedule-table tr:last-child td { border-bottom: none; }
+    
+    /* --- RULE FOR BREAKS AND PAUSES --- */
+    .schedule-table tr.is-break td {
+      font-style: italic;
+      font-size: 0.95em;
+      color: #777;
+    }
+    
+    /* --- NEW: RULE FOR 'OTHER' TYPE (More Visible) --- */
+    .schedule-table tr.is-other td {
+      background-color: #f0f4ff; /* A light blue background */
+      font-weight: 500; /* Slightly bolder text */
+    }
+    .schedule-table tr.is-other td:first-child {
+      border-left: 4px solid var(--schedule-primary-color);
+    }
   </style>
 <div class="schedule-card">
 <div class="schedule-tabs" id="schedule-tabs-container"></div>
@@ -289,7 +306,7 @@
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const scheduleData = [{"day_label":"Day 1","date":"July 7, 2025","activity":"Arrivals & Check-in & Breakfast","type":"NA","time_1":"7:30","timezone_1_label":"MOUNTAIN","time_2":"9:30","timezone_2_label":"EASTERN"},{"day_label":"Day 1","date":"July 7, 2025","activity":"Welcome","type":"Intro","time_1":"8:00","timezone_1_label":"MOUNTAIN","time_2":"10:00","timezone_2_label":"EASTERN"},{"day_label":"Day 2","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 3","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 4","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 5","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 6","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 7","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"}];
+      const scheduleData = [{"day_label":"Day 1","date":"July 7, 2025","activity":"Arrivals & Check-in & Breakfast","type":"Break","time_1":"7:30","timezone_1_label":"MOUNTAIN","time_2":"9:30","timezone_2_label":"EASTERN"},{"day_label":"Day 1","date":"July 7, 2025","activity":"Welcome","type":"other","time_1":"8:00","timezone_1_label":"MOUNTAIN","time_2":"10:00","timezone_2_label":"EASTERN"},{"day_label":"Day 2","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 3","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 4","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 5","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 6","date":"July 8, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 7","date":"August 12, 2025","activity":"Module 2","type":"Lecture","time_1":"8:30","timezone_1_label":"MOUNTAIN","time_2":"10:30","timezone_2_label":"EASTERN"},{"day_label":"Day 7","date":"August 12, 2025","activity":"Welcome","type":"other","time_1":"8:00","timezone_1_label":"MOUNTAIN","time_2":"10:00","timezone_2_label":"EASTERN"},{"day_label":"Day 7","date":"August 12, 2025","activity":"Welcome","type":"Lecture","time_1":"8:00","timezone_1_label":"MOUNTAIN","time_2":"10:00","timezone_2_label":"EASTERN"}];
       const tabsContainer = document.getElementById("schedule-tabs-container");
       const panelsContainer = document.getElementById("schedule-panels-container");
 
@@ -351,11 +368,20 @@
           const day = days[dayIndex];
           const dayEvents = scheduleData.filter(row => row.day_label === day);
           let tableHtml = `<table class="schedule-table"><thead><tr>
-                           <th style="width:25%;">Time (${selectedTzLabel})</th>
-                           <th>Activity</th>
-                           </tr></thead><tbody>`;
+                               <th style="width:25%;">${selectedTzLabel}</th>
+                               <th>Activity</th>
+                               </tr></thead><tbody>`;
           dayEvents.forEach(row => {
-            tableHtml += `<tr><td>${row[timeCol] || ""}</td><td>${row.activity || ""}</td></tr>`;
+            const type = row.type ? row.type.toLowerCase() : "";
+            let rowClass = "";
+
+            if (type === "break" || type === "pause") {
+              rowClass = "class='is-break'";
+            } else if (type === "other") {
+              rowClass = "class='is-other'";
+            }
+            
+            tableHtml += `<tr ${rowClass}><td>${row[timeCol] || ""}</td><td>${row.activity || ""}</td></tr>`;
           });
           tableHtml += `</tbody></table>`;
           panel.innerHTML = tableHtml;
@@ -365,26 +391,27 @@
       function switchTab(targetId) {
         tabs.forEach(tab => tab.classList.remove("active"));
         panels.forEach(panel => panel.classList.remove("active"));
+        
         const activeTab = document.querySelector(`[data-target='${targetId}']`);
         const activePanel = document.getElementById(targetId);
-        if (activeTab) activeTab.classList.add("active");
-        if (activePanel) activePanel.classList.add("active");
+        
+        if (activeTab) {
+          activeTab.classList.add("active");
+          activeTab.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        }
+        if (activePanel) {
+          activePanel.classList.add("active");
+        }
       }
       
-      // --- CHANGE: Rewritten function for more robust indicator logic ---
       function updateScrollIndicators() {
         const el = tabButtonsContainer;
-        // Use rounded values to avoid floating point inaccuracies
         const scrollLeft = Math.round(el.scrollLeft);
         const scrollWidth = Math.round(el.scrollWidth);
         const clientWidth = Math.round(el.clientWidth);
         
         const hasOverflow = scrollWidth > clientWidth;
-        
-        // Show left indicator if scrolled away from the start
         tabsWrapper.classList.toggle("scrolled-left", hasOverflow && scrollLeft > 0);
-        
-        // Show right indicator if there is overflow and we are not at the very end
         const isAtEnd = scrollLeft >= scrollWidth - clientWidth;
         tabsWrapper.classList.toggle("scrolled-right", hasOverflow && !isAtEnd);
       }
@@ -403,11 +430,32 @@
       window.addEventListener("resize", updateScrollIndicators);
 
       renderTables();
-      if (tabs.length > 0) {
-        switchTab(tabs[0].dataset.target);
+
+      // --- LOGIC TO ACTIVATE CURRENT DAY ---
+      let initialTabIndex = 0;
+
+      const today = new Date();
+      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      const monthName = monthNames[today.getMonth()];
+      const day = today.getDate();
+      const year = today.getFullYear();
+      const todayString = `${monthName} ${day}, ${year}`;
+
+      const todayEvent = scheduleData.find(row => row.date === todayString);
+
+      if (todayEvent) {
+        const dayIndex = days.findIndex(day => day === todayEvent.day_label);
+        if (dayIndex !== -1) {
+          initialTabIndex = dayIndex;
+        }
       }
-      
-      // A brief delay before the initial check can help ensure the browser has finalized layout
+
+      if (tabs.length > initialTabIndex) {
+        const initialTabId = `panel-${initialTabIndex}`;
+        switchTab(initialTabId);
+      }
+      // --- END OF CURRENT DAY LOGIC ---
+
       setTimeout(updateScrollIndicators, 100);
     });
   </script>
