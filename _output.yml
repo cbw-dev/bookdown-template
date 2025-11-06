@@ -37,17 +37,3 @@ bookdown::gitbook:
 
     download: ["pdf", "epub"]
   number_sections: false
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
-bookdown::html_document2:
-  css: style.css
-  pandoc_args:
-    - "--lua-filter=callouts.lua"
-  includes:
-    in_header:
-      - fa-header.html
