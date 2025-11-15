@@ -1,5 +1,7 @@
 -- callouts.lua
 -- Handles static, regular/important/subtle dropdowns, and plain dropdowns.
+-- FIX: Added logic for 'plain' style in the static (non-collapsible) section.
+-- FIX: Wrapped collapsible icon in 'callout-icon' span to fix alignment/color.
 
 local function get_default_icon(type)
   if type == "red" then return "fas fa-triangle-exclamation"
@@ -19,8 +21,8 @@ local function create_icon_element(icon_attr, type)
 
   if show_icon then
     local icon_fa_class = (icon_attr and icon_attr ~= "true") and icon_attr or get_default_icon(type)
-    -- Return the raw HTML for the icon
-    return '<i class="' .. icon_fa_class .. '" aria-hidden="true"></i>'
+    -- Return the raw HTML for the icon, now wrapped in the span
+    return '<span class="callout-icon"><i class="' .. icon_fa_class .. '" aria-hidden="true"></i></span>'
   end
   return ''
 end
@@ -79,8 +81,8 @@ function Div(el)
 
       local caret_html = '<span class="callout-dropdown-caret"><i class="fas fa-chevron-right" aria-hidden="true"></i></span>'
 
-      -- Combine all parts of the summary, adding a non-breaking space after the icon.
-      local summary_content_html = icon_html .. '&nbsp;&nbsp;&nbsp;<span class="callout-dropdown-title">' .. title_html .. '</span> ' .. caret_html
+      -- --- FIX: Removed hardcoded '&nbsp;&nbsp;&nbsp;' for consistent spacing ---
+      local summary_content_html = icon_html .. '<span class="callout-dropdown-title">' .. title_html .. '</span> ' .. caret_html
       local summary_html = '<summary class="'.. table.concat(summary_classes, " ") ..'">' .. summary_content_html .. '</summary>'
 
       -- Convert the div's content to HTML
@@ -92,11 +94,30 @@ function Div(el)
 
       return pandoc.RawBlock('html', final_html)
 
-    else -- Static callout (your original logic for this was sound)
-      local specific_style_class = "callout-" .. type
-      if style == "important" then specific_style_class = specific_style_class .. "-important"
-      elseif style == "subtle" then specific_style_class = specific_style_class .. "-subtle"
+    else -- Static callout
+
+      -- --- START FIX ---
+      -- This logic now correctly handles 'plain', 'subtle', 'important', and 'regular' styles.
+      local main_classes = {}
+      local base_type_class = "callout-" .. type
+
+      if style == "plain" then
+        table.insert(main_classes, "callout-plain")
+        table.insert(main_classes, base_type_class)
+      elseif style == "subtle" then
+        -- Note: The original logic for static 'subtle' didn't add a 'callout-subtle' base class.
+        -- We'll match the collapsible logic for consistency.
+        table.insert(main_classes, "callout-subtle")
+        table.insert(main_classes, base_type_class .. "-subtle")
+      elseif style == "important" then
+        table.insert(main_classes, base_type_class .. "-important")
+      else -- "regular"
+        table.insert(main_classes, base_type_class)
       end
+
+      local specific_style_class_str = table.concat(main_classes, " ")
+      -- --- END FIX ---
+
 
       -- create_title_element and create_icon_element need to return pandoc elements for the static case
       -- Re-defining local helper functions for the static case to return pandoc objects
@@ -140,7 +161,8 @@ function Div(el)
       if icon_element then table.insert(main_div_children, icon_element) end
       table.insert(main_div_children, content_div_element)
 
-      return pandoc.Div(main_div_children, {class = specific_style_class})
+      -- Use the new class string here
+      return pandoc.Div(main_div_children, {class = specific_style_class_str})
     end
   end
   return nil
